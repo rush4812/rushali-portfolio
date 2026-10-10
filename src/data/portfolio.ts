@@ -1,4 +1,4 @@
-import { SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiVercel, SiGit, SiFramer, SiJavascript, SiTypescript, SiRedux, SiPrisma } from "react-icons/si";
+import { SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiVercel, SiGit, SiFramer, SiJavascript, SiTypescript, SiRedux, SiMysql } from "react-icons/si";
 
 export const portfolioData = {
   personal: {
@@ -63,14 +63,14 @@ export const portfolioData = {
       title: "Madhubhan Resort",
       summary: "A premium hotel booking platform with fast page loads and smooth luxury animations.",
       role: "Full Stack Developer",
-      tech: ["Next.js", "TypeScript", "Prisma", "Framer Motion"],
+      tech: ["Next.js", "TypeScript", "MySQL", "Framer Motion"],
       liveDemo: "#", // TODO: Add real Live Demo URL
       github: "#", // TODO: Add real GitHub URL
       coverImage: "/projects/madhubhan-cover.jpg", // TODO: Add real image
       caseStudy: {
         problem: "The resort wanted their website to feel as premium and luxurious as their physical property, but without becoming slow to load.",
         approach: "I developed the entire website focusing on smooth, cinematic scroll animations while keeping a strict check on performance and image sizes.",
-        techDecisions: "I used Framer Motion for the smooth animations and Prisma to safely talk to our database using TypeScript.",
+        techDecisions: "I used Framer Motion for the smooth animations and MySQL for reliable booking data persistence.",
         result: "Achieved a 98+ Lighthouse performance score even with heavy, high-quality images and videos.",
         gallery: []
       }
@@ -187,9 +187,9 @@ export const portfolioData = {
     {
       title: "DATABASES",
       tools: [
-        { name: "MongoDB", icon: SiMongodb, color: "#47A248", category: "db" },
         { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1", category: "db" },
-        { name: "Prisma", icon: SiPrisma, color: "#2D3748", category: "db" }
+        { name: "MySQL", icon: SiMysql, color: "#4479A1", category: "db" },
+        { name: "MongoDB", icon: SiMongodb, color: "#47A248", category: "db" }
       ]
     },
     {

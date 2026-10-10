@@ -74,7 +74,7 @@ export const skillsData: Skill[] = [
     color: "#339933",
     level: "daily", // TODO: confirm
     usedIn: [{ project: "Amanta Healthcare", note: "API development", href: "#projects" }], // TODO: confirm
-    relatedTo: ["express", "mongodb", "postgresql", "prisma"],
+    relatedTo: ["express", "mongodb", "postgresql", "mysql"],
   },
   {
     id: "express",
@@ -89,34 +89,34 @@ export const skillsData: Skill[] = [
   
   // Database
   {
-    id: "mongodb",
-    name: "MongoDB",
-    category: "database",
-    icon: "SiMongodb",
-    color: "#47A248",
-    level: "daily", // TODO: confirm
-    usedIn: [{ project: "Amanta Healthcare", note: "NoSQL document storage", href: "#projects" }], // TODO: confirm
-    relatedTo: ["nodejs", "express"],
-  },
-  {
     id: "postgresql",
     name: "PostgreSQL",
     category: "database",
     icon: "SiPostgresql",
     color: "#4169E1",
-    level: "comfortable", // TODO: confirm
-    usedIn: [{ project: "Various", note: "Relational data modeling", href: "#projects" }], // TODO: confirm
-    relatedTo: ["nodejs", "prisma"],
+    level: "daily",
+    usedIn: [{ project: "Calico Museum Archives", note: "Relational data modeling", href: "#projects" }],
+    relatedTo: ["nodejs", "mysql"],
   },
   {
-    id: "prisma",
-    name: "Prisma",
+    id: "mysql",
+    name: "MySQL",
     category: "database",
-    icon: "SiPrisma",
-    color: "#2D3748",
-    level: "comfortable", // TODO: confirm
-    usedIn: [{ project: "Various", note: "Type-safe ORM", href: "#projects" }], // TODO: confirm
-    relatedTo: ["postgresql", "nodejs", "nextjs"],
+    icon: "SiMysql",
+    color: "#4479A1",
+    level: "daily",
+    usedIn: [{ project: "Madhubhan Resort", note: "Relational database storage", href: "#projects" }],
+    relatedTo: ["nodejs", "postgresql"],
+  },
+  {
+    id: "mongodb",
+    name: "MongoDB",
+    category: "database",
+    icon: "SiMongodb",
+    color: "#47A248",
+    level: "daily",
+    usedIn: [{ project: "Amanta Healthcare", note: "NoSQL document storage", href: "#projects" }],
+    relatedTo: ["nodejs", "express"],
   },
   
   // DevOps
