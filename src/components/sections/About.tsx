@@ -3,19 +3,13 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  Sparkles, 
-  Terminal, 
   Rocket, 
   Zap, 
-  BookOpen, 
   GraduationCap, 
-  Layers, 
   CheckCircle2, 
-  ArrowUpRight,
   Code2,
   Cpu,
-  Flame,
-  Globe2
+  Flame
 } from "lucide-react";
 
 type ActiveTab = "profile" | "agility" | "philosophy";
@@ -302,7 +296,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative w-full rounded-3xl p-8 sm:p-12 mb-8 bg-gradient-to-r from-[#0d172a] via-[#091224] to-[#0d162d] border border-cyan-500/30 overflow-hidden shadow-2xl"
+          className="relative w-full rounded-3xl p-8 sm:p-12 bg-gradient-to-r from-[#0d172a] via-[#091224] to-[#0d162d] border border-cyan-500/30 overflow-hidden shadow-2xl"
         >
           {/* Glowing Shimmer Bar */}
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse" />
@@ -360,71 +354,6 @@ export default function About() {
 
           </div>
         </motion.div>
-
-        {/* BENTO ROW 3: THREE ARCHITECTURAL PILLARS */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          
-          {/* Pillar 1 */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="p-8 rounded-3xl bg-gradient-to-b from-[#0e1422] to-[#090e1a] border border-white/10 hover:border-cyan-400/40 transition-all duration-500 shadow-xl group hover:-translate-y-1"
-          >
-            <div className="w-12 h-12 rounded-2xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300">
-              <BookOpen size={22} />
-            </div>
-            <div className="font-mono text-[10px] text-neon-accent uppercase tracking-widest mb-2">Foundation</div>
-            <h4 className="font-display font-bold text-xl text-foreground mb-3">
-              Solid MCA Core
-            </h4>
-            <p className="font-mono text-xs text-foreground/60 leading-relaxed">
-              Academic and practical training in Object-Oriented Programming, Data Structures, Relational/NoSQL database architectures, and systems design that makes learning any language straightforward.
-            </p>
-          </motion.div>
-
-          {/* Pillar 2 */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="p-8 rounded-3xl bg-gradient-to-b from-[#0e1422] to-[#090e1a] border border-white/10 hover:border-neon-accent/40 transition-all duration-500 shadow-xl group hover:-translate-y-1"
-          >
-            <div className="w-12 h-12 rounded-2xl bg-neon-accent/10 border border-neon-accent/20 flex items-center justify-center text-neon-accent mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Layers size={22} />
-            </div>
-            <div className="font-mono text-[10px] text-neon-accent uppercase tracking-widest mb-2">Clean Code</div>
-            <h4 className="font-display font-bold text-xl text-foreground mb-3">
-              Scalable Architecture
-            </h4>
-            <p className="font-mono text-xs text-foreground/60 leading-relaxed">
-              Writing self-documenting code with strong TypeScript typing, modular folder conventions, clean separation of concerns, and robust error management built for longevity.
-            </p>
-          </motion.div>
-
-          {/* Pillar 3 */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="p-8 rounded-3xl bg-gradient-to-b from-[#0e1422] to-[#090e1a] border border-white/10 hover:border-indigo-400/40 transition-all duration-500 shadow-xl group hover:-translate-y-1"
-          >
-            <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-6 group-hover:scale-110 transition-transform duration-300">
-              <Globe2 size={22} />
-            </div>
-            <div className="font-mono text-[10px] text-neon-accent uppercase tracking-widest mb-2">Delivery</div>
-            <h4 className="font-display font-bold text-xl text-foreground mb-3">
-              End-to-End Ownership
-            </h4>
-            <p className="font-mono text-xs text-foreground/60 leading-relaxed">
-              From database schema design in PostgreSQL, MySQL, and MongoDB to high-performance Next.js frontends and automated deployments, taking complete ownership of features from start to finish.
-            </p>
-          </motion.div>
-
-        </div>
 
       </div>
     </section>
