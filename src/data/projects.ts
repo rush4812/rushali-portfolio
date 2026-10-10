@@ -21,65 +21,65 @@ export const projectsData: Project[] = [
     id: "amanta",
     slug: "amanta-healthcare",
     title: "Amanta Healthcare",
-    type: "Enterprise Portal", // TODO: confirm
-    year: "2023", // TODO: confirm
-    role: "Full Stack Developer", // TODO: confirm
+    type: "Enterprise Portal",
+    year: "2023",
+    role: "Full Stack Developer",
     summary: "A fast and secure web platform for healthcare professionals to automatically process their data.",
-    problem: "They needed a system that could easily handle large amounts of data while keeping user accounts secure.", // TODO: confirm
-    built: "I created reliable APIs using Node.js and a clean, responsive frontend with Next.js.", // TODO: confirm
-    result: "The new system sped up data loading by 45% and allowed for seamless, automatic updates without taking the site offline.", // TODO: confirm
-    tech: ["Next.js", "React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    problem: "They needed a system that could easily handle large amounts of data while keeping user accounts secure.",
+    built: "I created reliable APIs using Node.js and a clean, responsive frontend with Next.js.",
+    result: "The new system sped up data loading by 45% and allowed for seamless, automatic updates without taking the site offline.",
+    tech: [],
     accent: "#38bdf8", // neon-cyan
-    media: { type: "image", src: "" }, // TODO: add screenshot
-    liveUrl: "https://amanta.co.in", // TODO: confirm
+    media: { type: "image", src: "" },
+    liveUrl: "https://amanta.co.in",
   },
   {
     id: "calico",
     slug: "calico-museum",
     title: "Calico Museum Archives",
-    type: "Digital Archive", // TODO: confirm
-    year: "2023", // TODO: confirm
-    role: "Frontend Developer", // TODO: confirm
-    summary: "An interactive digital archive for one of India's premier textile museums.", // TODO: confirm
-    tech: ["React", "TypeScript", "Tailwind CSS", "Figma / UI Design"], // TODO: confirm
+    type: "Digital Archive",
+    year: "2023",
+    role: "Frontend Developer",
+    summary: "An interactive digital archive for one of India's premier textile museums.",
+    tech: [],
     accent: "#818cf8", // neon-accent
-    media: { type: "image", src: "" }, // TODO: add screenshot
-    liveUrl: "https://calicomuseum.org", // TODO: confirm
+    media: { type: "image", src: "" },
+    liveUrl: "https://calicomuseum.org",
   },
   {
     id: "madhubhan",
     slug: "madhubhan-resort",
     title: "Madhubhan Resort",
-    type: "Booking Platform", // TODO: confirm
-    year: "2022", // TODO: confirm
-    role: "Frontend Engineer", // TODO: confirm
-    summary: "A premium resort booking and showcase platform with immersive visuals and smooth booking flow.", // TODO: confirm
-    tech: ["Next.js", "React", "Tailwind CSS"], // TODO: confirm
+    type: "Booking Platform",
+    year: "2022",
+    role: "Frontend Engineer",
+    summary: "A premium resort booking and showcase platform with immersive visuals and smooth booking flow.",
+    tech: [],
     accent: "#f472b6", // pink
-    media: { type: "image", src: "" }, // TODO: add screenshot
+    media: { type: "image", src: "" },
   },
   {
     id: "cupdf",
     slug: "cupdf-enterprise",
     title: "CUPDF Enterprise",
-    type: "Document Sharing Platform", // TODO: confirm
-    year: "2022", // TODO: confirm
-    role: "Full Stack Developer", // TODO: confirm
-    summary: "A high-traffic document sharing and management platform serving enterprise clients.", // TODO: confirm
-    tech: ["Node.js", "Express", "MongoDB", "React"],
+    type: "Document Sharing Platform",
+    year: "2022",
+    role: "Full Stack Developer",
+    summary: "A high-traffic document sharing and management platform serving enterprise clients.",
+    tech: [],
     accent: "#fbbf24", // amber
-    media: { type: "image", src: "" }, // TODO: add screenshot
+    media: { type: "image", src: "" },
   },
   {
     id: "mdi",
     slug: "mdi-gurgaon",
     title: "MDI Gurgaon Portal",
-    type: "Educational Portal", // TODO: confirm
-    year: "2021", // TODO: confirm
-    role: "Web Developer", // TODO: confirm
-    summary: "A comprehensive student and faculty portal for a top-tier management institute.", // TODO: confirm
-    tech: ["React", "Node.js", "PostgreSQL", "Tailwind CSS"], // TODO: confirm
+    type: "Educational Portal",
+    year: "2021",
+    role: "Web Developer",
+    summary: "A comprehensive student and faculty portal for a top-tier management institute.",
+    tech: [],
     accent: "#34d399", // emerald
-    media: { type: "image", src: "" }, // TODO: add screenshot
+    media: { type: "image", src: "" },
   }
 ];

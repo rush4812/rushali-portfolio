@@ -27,7 +27,7 @@ export const portfolioData = {
       title: "Amanta Healthcare",
       summary: "A fast and secure web platform for healthcare professionals with automated data processing.",
       role: "Lead Full Stack Developer",
-      tech: ["Next.js", "MongoDB", "Express", "TailwindCSS"],
+      tech: [],
       liveDemo: "#", // TODO: Add real Live Demo URL
       github: "#", // TODO: Add real GitHub URL
       coverImage: "/projects/amanta-cover.jpg", // TODO: Add real image
@@ -45,7 +45,7 @@ export const portfolioData = {
       title: "Calico Museum Archives",
       summary: "A clean, interactive website for a digital museum archive to explore thousands of historical records.",
       role: "Frontend Engineer",
-      tech: ["React.js", "Redux", "Node.js", "PostgreSQL"],
+      tech: [],
       liveDemo: "#", // TODO: Add real Live Demo URL
       github: "#", // TODO: Add real GitHub URL
       coverImage: "/projects/calico-cover.jpg", // TODO: Add real image
@@ -63,7 +63,7 @@ export const portfolioData = {
       title: "Madhubhan Resort",
       summary: "A premium hotel booking platform with fast page loads and smooth, luxurious animations.",
       role: "Full Stack Developer",
-      tech: ["Next.js", "TypeScript", "MySQL", "Figma (UI/UX)"],
+      tech: [],
       liveDemo: "#", // TODO: Add real Live Demo URL
       github: "#", // TODO: Add real GitHub URL
       coverImage: "/projects/madhubhan-cover.jpg", // TODO: Add real image
@@ -81,7 +81,7 @@ export const portfolioData = {
       title: "CUPDF",
       summary: "A robust UI implementation using Vue.js for seamless document handling.",
       role: "Frontend Developer",
-      tech: ["Vue.js", "JavaScript", "TailwindCSS"],
+      tech: [],
       liveDemo: "#",
       github: "#",
       coverImage: "/placeholder.jpg",
@@ -99,7 +99,7 @@ export const portfolioData = {
       title: "MDI Gurgaon",
       summary: "Comprehensive website maintenance and layout optimization.",
       role: "Software Developer",
-      tech: ["React.js", "CSS3", "JavaScript"],
+      tech: [],
       liveDemo: "#",
       github: "#",
       coverImage: "/placeholder.jpg",
@@ -117,7 +117,7 @@ export const portfolioData = {
       title: "Elecon",
       summary: "Website maintenance and layout fixes for an industrial enterprise.",
       role: "Software Developer",
-      tech: ["React.js", "Node.js"],
+      tech: [],
       liveDemo: "#",
       github: "#",
       coverImage: "/placeholder.jpg",

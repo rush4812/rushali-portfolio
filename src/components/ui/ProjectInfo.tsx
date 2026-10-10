@@ -41,16 +41,18 @@ export function ProjectInfo({ project }: { project: Project }) {
         )}
         
         {/* Tech Chips */}
-        <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 md:mb-6">
-          {project.tech.map((t) => (
-            <span 
-              key={t} 
-              className="px-2 py-0.5 sm:px-3 sm:py-1 bg-white/5 border border-white/10 rounded-full font-mono text-[9px] sm:text-[11px] text-foreground/85 tracking-wider uppercase"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
+        {project.tech && project.tech.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 md:mb-6">
+            {project.tech.map((t) => (
+              <span 
+                key={t} 
+                className="px-2 py-0.5 sm:px-3 sm:py-1 bg-white/5 border border-white/10 rounded-full font-mono text-[9px] sm:text-[11px] text-foreground/85 tracking-wider uppercase"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Actions */}
