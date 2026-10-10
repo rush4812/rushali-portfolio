@@ -1,5 +1,4 @@
-import { SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiVercel, SiGit, SiFramer, SiJavascript, SiTypescript, SiRedux, SiPrisma, SiDocker } from "react-icons/si";
-import { FaAws } from "react-icons/fa";
+import { SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiVercel, SiGit, SiFramer, SiJavascript, SiTypescript, SiRedux, SiPrisma } from "react-icons/si";
 
 export const portfolioData = {
   personal: {
@@ -197,9 +196,7 @@ export const portfolioData = {
       title: "DEVOPS",
       tools: [
         { name: "Vercel", icon: SiVercel, color: "#FFFFFF", category: "devops" },
-        { name: "Git", icon: SiGit, color: "#F05032", category: "devops" },
-        { name: "Docker", icon: SiDocker, color: "#2496ED", category: "devops" },
-        { name: "AWS", icon: FaAws, color: "#FF9900", category: "devops" }
+        { name: "Git", icon: SiGit, color: "#F05032", category: "devops" }
       ]
     },
     {

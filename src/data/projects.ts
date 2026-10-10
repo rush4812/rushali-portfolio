@@ -66,7 +66,7 @@ export const projectsData: Project[] = [
     year: "2022", // TODO: confirm
     role: "Full Stack Developer", // TODO: confirm
     summary: "A high-traffic document sharing and management platform serving enterprise clients.", // TODO: confirm
-    tech: ["Node.js", "Express", "MongoDB", "React", "AWS"], // TODO: confirm
+    tech: ["Node.js", "Express", "MongoDB", "React"],
     accent: "#fbbf24", // amber
     media: { type: "image", src: "" }, // TODO: add screenshot
   },

@@ -140,24 +140,7 @@ export const skillsData: Skill[] = [
     usedIn: [{ project: "All Projects", note: "Version control", href: "#projects" }], // TODO: confirm
     relatedTo: ["vercel"],
   },
-  {
-    id: "docker",
-    name: "Docker",
-    category: "devops",
-    icon: "SiDocker",
-    color: "#2496ED",
-    level: "learning", // TODO: confirm
-    relatedTo: ["nodejs", "postgresql"],
-  },
-  {
-    id: "aws",
-    name: "AWS",
-    category: "devops",
-    icon: "FaAws",
-    color: "#FF9900",
-    level: "learning", // TODO: confirm
-    relatedTo: ["docker"],
-  },
+
   
   // Languages
   {
