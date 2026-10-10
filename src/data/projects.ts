@@ -30,7 +30,7 @@ export const projectsData: Project[] = [
     result: "The new system sped up data loading by 45% and allowed for seamless, automatic updates without taking the site offline.",
     tech: [],
     accent: "#38bdf8", // neon-cyan
-    media: { type: "image", src: "" },
+    media: { type: "image", src: "/projects/amanta.png" },
     liveUrl: "https://amanta.co.in",
   },
   {
@@ -43,7 +43,7 @@ export const projectsData: Project[] = [
     summary: "An interactive digital archive for one of India's premier textile museums.",
     tech: [],
     accent: "#818cf8", // neon-accent
-    media: { type: "image", src: "" },
+    media: { type: "image", src: "/projects/calico.png" },
     liveUrl: "https://calicomuseum.org",
   },
   {
@@ -56,7 +56,8 @@ export const projectsData: Project[] = [
     summary: "A premium resort booking and showcase platform with immersive visuals and smooth booking flow.",
     tech: [],
     accent: "#f472b6", // pink
-    media: { type: "image", src: "" },
+    media: { type: "image", src: "/projects/madhubhan.png" },
+    liveUrl: "https://madhubhanresortandspa.com/",
   },
   {
     id: "cupdf",
@@ -68,7 +69,8 @@ export const projectsData: Project[] = [
     summary: "A high-traffic document sharing and management platform serving enterprise clients.",
     tech: [],
     accent: "#fbbf24", // amber
-    media: { type: "image", src: "" },
+    media: { type: "image", src: "/projects/cupdf.png" },
+    liveUrl: "https://cupdf.org/",
   },
   {
     id: "mdi",
@@ -80,6 +82,19 @@ export const projectsData: Project[] = [
     summary: "A comprehensive student and faculty portal for a top-tier management institute.",
     tech: [],
     accent: "#34d399", // emerald
-    media: { type: "image", src: "" },
+    media: { type: "image", src: "/projects/mdi.png" },
+    liveUrl: "https://mdi.ac.in",
+  },
+  {
+    id: "akwakare",
+    slug: "akwakare",
+    title: "Akwakare",
+    type: "Platform",
+    year: "2024",
+    role: "Full Stack Developer",
+    summary: "A comprehensive project currently under development.",
+    tech: [],
+    accent: "#60a5fa", // blue
+    media: { type: "image", src: "/projects/akwakare.png" },
   }
 ];
