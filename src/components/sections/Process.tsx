@@ -1,113 +1,184 @@
 "use client";
 import { motion } from "framer-motion";
-import { useRef } from "react";
-import { TiltCard } from "@/components/ui/TiltCard";
+import { Compass, Code2, Server, Rocket, Check } from "lucide-react";
 
 const processSteps = [
-  { id: "01", title: "Discovery & UI/UX", desc: "Understanding requirements, user research, and wireframing intuitive interfaces. I prioritize the user journey before writing a single line of code." },
-  { id: "02", title: "Frontend Architecture", desc: "Building responsive, accessible, and fast components using Next.js & Framer Motion. Every animation is carefully calibrated for performance." },
-  { id: "03", title: "Backend Systems", desc: "Designing scalable MongoDB schemas and robust REST APIs with Express & Node. Security and data integrity are baked in from day one." },
-  { id: "04", title: "CI/CD & Delivery", desc: "Automating testing and deployment pipelines for zero-downtime launches. Continuous integration ensures the product is always production-ready." }
+  {
+    step: "01",
+    phase: "Phase 01",
+    title: "Discovery & UI/UX",
+    desc: "Understanding product goals, architecture requirements, and mapping intuitive user journeys before writing code.",
+    highlights: ["Scope & Requirements", "Architecture Planning", "UI/UX Wireframes"],
+    icon: Compass,
+    accent: "#38bdf8",
+  },
+  {
+    step: "02",
+    phase: "Phase 02",
+    title: "Frontend Architecture",
+    desc: "Crafting pixel-perfect, accessible, and high-performance interfaces with Next.js, TypeScript, and Framer Motion.",
+    highlights: ["Component Systems", "State Management", "Fluid Animations"],
+    icon: Code2,
+    accent: "#22d3ee",
+  },
+  {
+    step: "03",
+    phase: "Phase 03",
+    title: "Backend & Systems",
+    desc: "Architecting reliable REST APIs and robust data layers with Node.js, Express, and MongoDB or PostgreSQL.",
+    highlights: ["Secure API Routing", "Data Modeling", "Auth & Validation"],
+    icon: Server,
+    accent: "#60a5fa",
+  },
+  {
+    step: "04",
+    phase: "Phase 04",
+    title: "Testing & Deployment",
+    desc: "Automating CI/CD pipelines, optimizing lighthouse scores, and deploying zero-downtime production builds.",
+    highlights: ["Automated CI/CD", "Vercel / Cloud Deploy", "Performance Audits"],
+    icon: Rocket,
+    accent: "#38bdf8",
+  },
 ];
 
 export default function Process() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
   return (
-    <section id="process" ref={containerRef} className="py-32 relative w-full px-6 overflow-hidden bg-[#050505]">
+    <section id="process" className="py-24 md:py-32 relative w-full px-6 overflow-hidden bg-background border-t border-white/5">
       
-      {/* Space-like subtle glowing background element */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[500px] bg-neon-cyan/5 blur-[120px] rounded-full pointer-events-none" />
+      {/* Background Subtle Gradient */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-neon-cyan/5 blur-[140px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <motion.h2 
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="font-mono text-neon-cyan text-xs tracking-[0.3em] uppercase mb-16 flex items-center gap-4 text-center justify-center w-full"
-        >
-          <span className="w-8 h-[1px] bg-neon-cyan" />
-          The Pipeline
-          <span className="w-8 h-[1px] bg-neon-cyan" />
-        </motion.h2>
+        
+        {/* Header */}
+        <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-mono text-neon-accent text-xs tracking-[0.3em] uppercase mb-3 flex items-center justify-center gap-3"
+          >
+            <span className="w-8 h-[1px] bg-neon-accent" />
+            <span>Workflow & Pipeline</span>
+            <span className="w-8 h-[1px] bg-neon-accent" />
+          </motion.div>
+          
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-foreground mb-4 tracking-tight"
+          >
+            Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-accent to-neon-cyan">Pipeline.</span>
+          </motion.h2>
 
-        <div className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-40 tracking-tight">
-          How I Build <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-accent to-neon-cyan">Digital Experiences.</span>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="font-mono text-sm text-foreground/60 leading-relaxed"
+          >
+            A disciplined 4-stage engineering methodology designed for speed, clarity, and rock-solid code quality.
+          </motion.p>
         </div>
 
-        <div className="relative">
-          {/* Continuous background track line (Desktop) */}
-          <div className="hidden lg:block absolute top-0 left-0 w-full h-[2px] bg-white/5 z-0 rounded-full" />
+        {/* Pipeline Track Bar (Desktop) */}
+        <div className="hidden lg:block relative mb-12 max-w-6xl mx-auto px-12">
+          {/* Base Track */}
+          <div className="absolute top-1/2 left-12 right-12 h-[2px] bg-white/10 -translate-y-1/2 z-0 rounded-full" />
           
-          {/* Animated neon fill line (Desktop) */}
+          {/* Animated Glow Line */}
           <motion.div 
-            initial={{ width: "0%" }}
-            whileInView={{ width: "100%" }}
-            transition={{ duration: 3, ease: "linear" }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="hidden lg:block absolute top-0 left-0 h-[3px] bg-gradient-to-r from-neon-accent via-neon-cyan to-neon-accent z-0 shadow-[0_0_20px_rgba(56,189,248,1)] rounded-full origin-left" 
+            className="absolute top-1/2 left-12 h-[2px] bg-gradient-to-r from-transparent via-neon-cyan to-transparent w-48 -translate-y-1/2 z-0"
+            animate={{ left: ["5%", "85%"] }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
           />
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12 relative pt-8 lg:pt-0">
+          {/* Node Indicators */}
+          <div className="relative z-10 flex justify-between items-center">
             {processSteps.map((step, i) => (
-              <motion.div
-                key={step.id}
-                initial={{ opacity: 0, y: 50, scale: 0.9 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.8, delay: i * 0.75, type: "spring", bounce: 0.4 }}
-                viewport={{ once: true, margin: "-100px" }}
-                className="relative flex flex-col items-center text-center group"
-              >
-                {/* Glowing Node on the horizontal line */}
-                <motion.div 
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ delay: i * 0.75, type: "spring" }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  className="hidden lg:block absolute -top-[7px] w-4 h-4 bg-[#050505] border-[2px] border-neon-cyan rounded-full z-20 shadow-[0_0_20px_rgba(56,189,248,1)] group-hover:scale-150 group-hover:bg-neon-cyan transition-all duration-500"
-                />
-                
-                {/* Vertical connector beam */}
-                <motion.div 
-                  initial={{ scaleY: 0 }}
-                  whileInView={{ scaleY: 1 }}
-                  transition={{ delay: i * 0.75 + 0.2, duration: 0.5 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  className="hidden lg:block absolute top-[9px] w-[1px] h-[60px] bg-gradient-to-b from-neon-cyan to-transparent z-10 origin-top opacity-50 group-hover:opacity-100 transition-opacity"
-                />
-
-                {/* Floating Content wrapped in TiltCard */}
-                <div className="relative z-10 w-full pt-16 lg:pt-24 pb-8 flex flex-col items-center">
-                  <TiltCard className="w-full h-full">
-                    <div className="bg-white/[0.02] backdrop-blur-md p-8 border border-white/5 rounded-3xl group-hover:border-neon-cyan/30 transition-all duration-500 relative overflow-hidden flex flex-col items-center h-full shadow-2xl">
-                      
-                      {/* Glowing hover background */}
-                      <div className="absolute inset-0 bg-gradient-to-b from-neon-cyan/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
-
-                      {/* Giant floating number behind text */}
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[120px] font-black text-white/[0.03] z-0 group-hover:text-neon-cyan/[0.05] group-hover:scale-110 transition-all duration-700 pointer-events-none select-none tracking-tighter">
-                        {step.id}
-                      </div>
-
-                      <div className="relative z-10 w-12 h-12 rounded-full border border-white/10 flex items-center justify-center font-mono text-neon-accent text-sm tracking-widest mb-6 bg-black/50 group-hover:border-neon-cyan/50 group-hover:shadow-[0_0_30px_rgba(56,189,248,0.2)] transition-all duration-500" style={{ transform: "translateZ(40px)" }}>
-                        {step.id}
-                      </div>
-                      
-                      <h3 className="relative z-10 font-display text-xl md:text-2xl font-bold mb-4 group-hover:text-neon-cyan transition-colors duration-500" style={{ transform: "translateZ(30px)" }}>
-                        {step.title}
-                      </h3>
-                      
-                      <p className="relative z-10 font-sans text-xs md:text-sm text-foreground/60 leading-relaxed max-w-xs group-hover:text-foreground/90 transition-colors" style={{ transform: "translateZ(20px)" }}>
-                        {step.desc}
-                      </p>
-                    </div>
-                  </TiltCard>
+              <div key={step.step} className="flex flex-col items-center gap-2 bg-background px-3">
+                <div className="w-6 h-6 rounded-full border-2 border-neon-cyan/60 bg-[#090d14] flex items-center justify-center shadow-[0_0_12px_rgba(34,211,238,0.3)]">
+                  <span className="font-mono text-[10px] text-neon-cyan font-bold">{i + 1}</span>
                 </div>
-
-              </motion.div>
+                <span className="font-mono text-[10px] text-foreground/50 uppercase tracking-widest">
+                  {step.phase}
+                </span>
+              </div>
             ))}
           </div>
         </div>
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {processSteps.map((step, i) => {
+            const Icon = step.icon;
+            return (
+              <motion.div
+                key={step.step}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-40px" }}
+                transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
+                className="group relative flex flex-col justify-between p-6 bg-[#0c1018]/90 hover:bg-[#111724] border border-white/10 hover:border-neon-cyan/40 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_35px_rgba(34,211,238,0.12)]"
+              >
+                {/* Subtle Radial Glow on Hover */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none rounded-2xl"
+                  style={{ background: `radial-gradient(circle at 50% 0%, ${step.accent} 0%, transparent 75%)` }}
+                />
+
+                <div>
+                  {/* Top Header: Phase Badge & Step Number */}
+                  <div className="flex items-center justify-between mb-5">
+                    <span 
+                      className="font-mono text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-full border border-white/10 bg-white/5 font-semibold"
+                      style={{ color: step.accent }}
+                    >
+                      {step.phase}
+                    </span>
+                    <span className="font-mono text-xl font-bold text-foreground/20 group-hover:text-foreground/40 transition-colors">
+                      {step.step}
+                    </span>
+                  </div>
+
+                  {/* Icon */}
+                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-5 group-hover:bg-neon-cyan/10 group-hover:border-neon-cyan/40 transition-all duration-300">
+                    <Icon size={22} className="text-foreground/70 group-hover:text-neon-cyan transition-colors" />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-display text-xl font-bold text-foreground mb-3 group-hover:text-neon-cyan transition-colors">
+                    {step.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="font-mono text-xs text-foreground/70 leading-relaxed mb-6 font-normal">
+                    {step.desc}
+                  </p>
+                </div>
+
+                {/* Deliverables / Highlights */}
+                <div className="pt-4 border-t border-white/5 flex flex-col gap-2 mt-auto">
+                  <span className="font-mono text-[9px] text-foreground/40 uppercase tracking-widest font-semibold mb-1">
+                    Key Deliverables
+                  </span>
+                  {step.highlights.map((item) => (
+                    <div key={item} className="flex items-center gap-2">
+                      <Check size={12} className="text-neon-accent shrink-0" />
+                      <span className="font-mono text-[11px] text-foreground/80">
+                        {item}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
       </div>
     </section>
   );
