@@ -44,18 +44,20 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Rushali Jivrajani - Full Stack Developer",
-        type: "image/png",
-      },
-      {
-        url: "/og-image.jpg",
+        url: "https://rushali-jivrajani.vercel.app/og-image.jpg",
+        secureUrl: "https://rushali-jivrajani.vercel.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Rushali Jivrajani - Full Stack Developer",
         type: "image/jpeg",
+      },
+      {
+        url: "https://rushali-jivrajani.vercel.app/og-image.png",
+        secureUrl: "https://rushali-jivrajani.vercel.app/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Rushali Jivrajani - Full Stack Developer",
+        type: "image/png",
       },
     ],
   },
@@ -63,7 +65,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Rushali Jivrajani | Full Stack Developer",
     description: "Portfolio of Rushali Jivrajani — Full Stack Developer specializing in Next.js, React.js, Node.js, and databases.",
-    images: ["/og-image.png"],
+    images: ["https://rushali-jivrajani.vercel.app/og-image.jpg"],
     creator: "@rush4812",
   },
   icons: {
@@ -94,7 +96,7 @@ export default function RootLayout({
     name: "Rushali Jivrajani",
     jobTitle: "Full Stack Developer",
     url: "https://rushali-jivrajani.vercel.app",
-    image: "https://rushali-jivrajani.vercel.app/og-image.png",
+    image: "https://rushali-jivrajani.vercel.app/og-image.jpg",
     sameAs: [
       "https://github.com/rush4812",
       "https://linkedin.com/in/rushali-jivrajani"
@@ -115,6 +117,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}>
       <head>
+        <meta property="og:image" content="https://rushali-jivrajani.vercel.app/og-image.jpg" />
+        <meta property="og:image:secure_url" content="https://rushali-jivrajani.vercel.app/og-image.jpg" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Rushali Jivrajani - Full Stack Developer" />
+        <link rel="image_src" href="https://rushali-jivrajani.vercel.app/og-image.jpg" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
