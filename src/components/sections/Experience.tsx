@@ -1,44 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
+import { portfolioData } from "@/data/portfolio";
 
 export default function Experience() {
-  const experience = [
-    {
-      role: "Full Stack Developer",
-      company: "NetInc Digital Services",
-      period: "Jul 2024 - Present",
-      achievements: [
-        "Architected scalable microservices and responsive frontends using Next.js and the MERN stack.",
-        "Engineered concurrent REST APIs via Node/Express, handling high-throughput data requests.",
-        "Orchestrated complex MongoDB schemas, reducing query latency by 45% through advanced indexing.",
-        "Implemented zero-downtime CI/CD workflows via GitHub Actions for continuous automated deployment."
-      ]
-    },
-    {
-      role: "Full Stack Developer",
-      company: "Sharva InfoTech",
-      period: "Feb 2024 - Jun 2024",
-      achievements: [
-        "Developed high-performance React.js interfaces for enterprise-level client administration portals.",
-        "Optimized global state management trees and integrated scalable Node.js backend microservices.",
-        "Enforced rigorous Test-Driven Development (TDD) pipelines, ensuring 99.9% application uptime.",
-        "Collaborated with cross-functional agile teams to deliver production-ready features ahead of schedule."
-      ]
-    }
-  ];
-
-  const education = [
-    {
-      degree: "Master of Computer Application",
-      school: "Gujarat Technological University",
-      period: "2022 - 2024"
-    },
-    {
-      degree: "Bachelor of Computer Application",
-      school: "Saurashtra University",
-      period: "2019 - 2022"
-    }
-  ];
+  const { experience, education } = portfolioData;
 
   return (
     <section id="experience" className="py-32 relative w-full px-6 overflow-hidden">
@@ -53,7 +18,7 @@ export default function Experience() {
             className="font-mono text-neon-accent text-xs tracking-[0.3em] uppercase mb-16 flex items-center gap-4"
           >
             <span className="w-8 h-[1px] bg-neon-accent" />
-            03 / Deployment History
+            03 / Experience
           </motion.h2>
 
           <div className="relative border-l border-foreground/10 pl-8 space-y-16">

@@ -12,9 +12,9 @@ import Skills from "@/components/sections/Skills";
 import Stack from "@/components/sections/Stack";
 import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
+import Certifications from "@/components/sections/Certifications";
+import Process from "@/components/sections/Process";
 import Contact from "@/components/sections/Contact";
-
-const Scene = dynamic(() => import("@/components/3d/Scene"), { ssr: false });
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,7 +45,6 @@ export default function Home() {
 
   return (
     <main className="relative w-full z-10">
-      <Scene />
       <div className="relative z-10">
         <Hero />
         <div className="w-full bg-neon-accent/10 py-3 border-y border-neon-accent/20 overflow-hidden relative flex">
@@ -64,6 +63,8 @@ export default function Home() {
         <Stack />
         <Projects />
         <Experience />
+        <Certifications />
+        <Process />
         <Contact />
       </div>
     </main>

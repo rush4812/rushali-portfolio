@@ -1,14 +1,39 @@
 "use client";
 import { motion } from "framer-motion";
 import { TiltCard } from "@/components/ui/TiltCard";
+import { Database, Server, Layers, GitBranch, Zap, LayoutTemplate } from "lucide-react";
 
 const strengths = [
-  "Full Stack Development (MERN)",
-  "REST API & Microservices",
-  "JWT Auth & State Management",
-  "CI/CD Git & Deployment",
-  "Performance Optimization",
-  "Scalable Systems Architecture"
+  {
+    title: "Full Stack Development",
+    desc: "End-to-end web applications using Next.js and the MERN stack.",
+    icon: Database
+  },
+  {
+    title: "REST APIs & Microservices",
+    desc: "Scalable backend systems and high-throughput data pipelines.",
+    icon: Server
+  },
+  {
+    title: "Auth & State Management",
+    desc: "Secure JWT workflows and complex frontend state architecture.",
+    icon: Layers
+  },
+  {
+    title: "CI/CD & Deployment",
+    desc: "Automated GitHub Actions workflows and Vercel/Node deployments.",
+    icon: GitBranch
+  },
+  {
+    title: "Performance Optimization",
+    desc: "Server-side rendering, caching, and 95+ Lighthouse scores.",
+    icon: Zap
+  },
+  {
+    title: "Scalable Architecture",
+    desc: "Designing secure, maintainable databases and clear API layers.",
+    icon: LayoutTemplate
+  }
 ];
 
 export default function Skills() {
@@ -25,32 +50,46 @@ export default function Skills() {
           Core Competencies
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {strengths.map((str, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: i * 0.1, ease: "easeOut" }}
-              viewport={{ once: true, margin: "-100px" }}
-              className="w-full"
-            >
-              <TiltCard className="w-full h-full">
-                <div className="h-full bg-[#050505]/80 backdrop-blur-md p-8 border border-foreground/10 hover:border-neon-accent transition-colors duration-500 rounded-xl group relative overflow-hidden flex flex-col justify-center min-h-[160px]">
-                  {/* Glowing hover effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-neon-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  {/* Content lifted in 3D */}
-                  <div style={{ transform: "translateZ(30px)" }}>
-                    <div className="font-mono text-neon-cyan text-[10px] mb-2 tracking-widest opacity-60">0{i + 1}</div>
-                    <div className="font-display text-xl md:text-2xl font-bold text-foreground group-hover:text-neon-accent transition-colors">
-                      {str}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {strengths.map((str, i) => {
+            const Icon = str.icon;
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: i * 0.1, ease: "easeOut" }}
+                viewport={{ once: true, margin: "-50px" }}
+                className="w-full h-full"
+              >
+                <TiltCard className="w-full h-full group">
+                  <div className="h-full bg-white/[0.02] backdrop-blur-md p-8 border border-white/5 group-hover:border-neon-cyan/50 transition-all duration-500 rounded-2xl relative overflow-hidden flex flex-col justify-between min-h-[220px] shadow-2xl">
+                    
+                    {/* Glowing hover background */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                    
+                    {/* Top Section */}
+                    <div className="relative z-10 flex justify-between items-start mb-6">
+                      <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-neon-cyan/10 group-hover:border-neon-cyan/30 transition-all duration-500">
+                        <Icon size={20} className="text-foreground/50 group-hover:text-neon-cyan transition-colors duration-500" />
+                      </div>
+                      <div className="font-mono text-neon-accent text-[10px] tracking-widest opacity-60">0{i + 1}</div>
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="relative z-10" style={{ transform: "translateZ(30px)" }}>
+                      <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-3 group-hover:text-neon-cyan transition-colors duration-300">
+                        {str.title}
+                      </h3>
+                      <p className="font-mono text-xs text-foreground/50 leading-relaxed group-hover:text-foreground/80 transition-colors duration-300">
+                        {str.desc}
+                      </p>
                     </div>
                   </div>
-                </div>
-              </TiltCard>
-            </motion.div>
-          ))}
+                </TiltCard>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

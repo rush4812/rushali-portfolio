@@ -14,27 +14,14 @@ const navLinks = [
 
 export default function Navbar() {
   const { scrollY } = useScroll();
-  const [hidden, setHidden] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious() || 0;
-    if (latest > previous && latest > 150) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
     setIsScrolled(latest > 50);
   });
 
   return (
     <motion.nav
-      variants={{
-        visible: { y: 0 },
-        hidden: { y: "-100%" },
-      }}
-      animate={hidden ? "hidden" : "visible"}
-      transition={{ duration: 0.35, ease: "easeInOut" }}
       className={`fixed top-0 inset-x-0 z-50 w-full transition-all duration-300 ${
         isScrolled ? "bg-background/80 backdrop-blur-md border-b border-foreground/5 py-4" : "bg-transparent py-6"
       }`}
