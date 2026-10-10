@@ -15,9 +15,9 @@ export const portfolioData = {
     }
   },
   about: {
-    text: "Hi, I am a Full Stack Developer with a strong focus on the MERN stack and Next.js. I love turning complex business requirements into simple, scalable web applications. My core strength lies in bridging the gap between solid backends and smooth user interfaces to build complete digital solutions.",
-    currentlyLearning: "Advanced Cloud Architecture & WebGL",
-    // TODO: Add your real photo to the public folder and update this path
+    text: "Hi, I'm Rushali Jivrajani — a Full Stack Developer with an MCA degree and a strong foundation across Next.js, React, Node.js, and modern databases (PostgreSQL, MySQL, MongoDB). Beyond my core stack, my biggest strength is technical agility: I am perpetually curious, exceptionally quick to grasp new concepts, and always excited to learn, adapt, and build with whatever new technologies an ambitious project demands.",
+    mindset: "Relentlessly curious, rapid adopter, and dedicated to engineering scalable solutions.",
+    currentlyLearning: "AI Integration, Cloud-Native Architecture & Modern WebGL",
     photoUrl: "/placeholder-profile.jpg"
   },
   projects: [
