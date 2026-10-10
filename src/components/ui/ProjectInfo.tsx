@@ -62,7 +62,7 @@ export function ProjectInfo({ project }: { project: Project }) {
             href={project.liveUrl} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="group font-mono text-[10px] sm:text-[11px] text-foreground uppercase tracking-widest flex items-center gap-1.5 px-3.5 py-1.5 bg-white/5 hover:bg-white/10 border border-white/15 rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-neon-accent"
+            className="group font-mono text-[10px] sm:text-[11px] text-foreground uppercase tracking-widest flex items-center gap-1.5 px-3.5 py-1.5 bg-white/5 hover:bg-white/10 border border-white/15 rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-neon-accent active:scale-95"
           >
             <span className="font-bold">Live Demo</span>
             <ArrowUpRight size={13} className="text-foreground/60 group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -74,7 +74,7 @@ export function ProjectInfo({ project }: { project: Project }) {
             href={project.repoUrl} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="group font-mono text-[10px] sm:text-[11px] text-foreground/70 hover:text-foreground uppercase tracking-widest flex items-center gap-1.5 ml-auto focus:outline-none focus:ring-2 focus:ring-white/20 rounded-md px-2 py-1"
+            className="group font-mono text-[10px] sm:text-[11px] text-foreground/70 hover:text-foreground uppercase tracking-widest flex items-center gap-1.5 ml-auto focus:outline-none focus:ring-2 focus:ring-white/20 rounded-md px-2 py-1 active:scale-95"
           >
             <span className="border-b border-transparent group-hover:border-foreground/30 transition-colors pb-0.5">GitHub</span>
           </a>

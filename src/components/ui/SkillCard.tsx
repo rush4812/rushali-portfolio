@@ -34,11 +34,12 @@ export function SkillCard({ skill, onHover, isDimmed, index }: SkillCardProps) {
       className={`relative w-full transition-opacity duration-300 ${isDimmed ? "opacity-35" : "opacity-100"}`}
     >
       <div
-        className="group relative w-full flex flex-col items-center justify-center gap-2 sm:gap-3 p-3.5 sm:p-5 bg-[#0b0f17]/90 hover:bg-[#101623] border border-white/10 hover:border-white/30 rounded-xl sm:rounded-2xl transition-all duration-300 cursor-pointer overflow-hidden z-20 shadow-md hover:shadow-xl hover:-translate-y-1.5"
+        className="group relative w-full flex flex-col items-center justify-center gap-2 sm:gap-3 p-3.5 sm:p-5 bg-[#0b0f17]/90 hover:bg-[#101623] border border-white/10 hover:border-white/30 rounded-xl sm:rounded-2xl transition-all duration-300 cursor-pointer overflow-hidden z-20 shadow-md hover:shadow-xl hover:-translate-y-1.5 active:scale-95"
         style={{
           boxShadow: isFocused ? `0 0 24px ${skill.color}35` : undefined,
           borderColor: isFocused ? `${skill.color}90` : undefined,
         }}
+        onClick={() => handleInteract(!isFocused)}
         onMouseEnter={() => handleInteract(true)}
         onMouseLeave={() => handleInteract(false)}
         onFocus={() => handleInteract(true)}

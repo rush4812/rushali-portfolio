@@ -30,6 +30,25 @@ body {
   }
 }
 
+/* Hide scrollbars for clean mobile swiping */
+.no-scrollbar::-webkit-scrollbar,
+.hide-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+.no-scrollbar,
+.hide-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+/* Native app touch responsiveness */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+button, a {
+  touch-action: manipulation;
+}
+
 .bg-grid {
   background-image: 
     linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),

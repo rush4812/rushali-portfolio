@@ -125,13 +125,13 @@ export default function Projects() {
       <div 
         ref={scrollWrapperRef}
         onScroll={handleMobileScroll}
-        className="flex h-full items-center px-3 sm:px-4 md:px-[11vw] lg:px-[15vw] overflow-x-auto md:overflow-hidden snap-x snap-mandatory hide-scrollbar pt-24 sm:pt-28 pb-16 sm:pb-20 md:py-0"
+        className="flex h-full items-center px-3 sm:px-4 md:px-[11vw] lg:px-[15vw] overflow-x-auto md:overflow-hidden snap-x snap-mandatory hide-scrollbar pt-20 sm:pt-28 pb-16 sm:pb-20 md:py-0"
         style={{ width: isDesktop ? "max-content" : "100%" }}
       >
         {projectsData.map((project, i) => (
           <div 
             key={project.id} 
-            className="project-panel shrink-0 w-[100vw] md:w-[78vw] lg:w-[70vw] px-2 sm:px-4 md:px-8 flex justify-center items-center snap-center h-full"
+            className="project-panel shrink-0 w-[100vw] md:w-[78vw] lg:w-[70vw] px-2.5 sm:px-4 md:px-8 flex justify-center items-center snap-center h-full"
             data-cursor="view"
           >
             <ProjectCard project={project} isActive={activeIndex === i} />
@@ -161,8 +161,8 @@ export default function Projects() {
           )}
         </AnimatePresence>
 
-        {/* Arrows */}
-        <div className="hidden md:block">
+        {/* Responsive Arrows for both mobile and desktop */}
+        <div className="flex items-center">
           <ProjectArrows 
             onPrev={() => jumpTo(Math.max(activeIndex - 1, 0))}
             onNext={() => jumpTo(Math.min(activeIndex + 1, total - 1))}

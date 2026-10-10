@@ -32,6 +32,18 @@ export default function Navbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <>
       <motion.nav
@@ -76,58 +88,86 @@ export default function Navbar() {
           {/* Mobile Menu Hamburger Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-foreground hover:text-neon-accent transition-colors z-50 focus:outline-none focus:ring-2 focus:ring-neon-accent"
+            className="md:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 border border-white/10 text-foreground hover:text-neon-accent transition-all z-50 focus:outline-none active:scale-95"
             aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={mobileMenuOpen}
           >
-            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            {mobileMenuOpen ? <X size={20} className="text-neon-accent" /> : <Menu size={20} />}
           </button>
         </div>
       </motion.nav>
 
-      {/* Mobile Animated Dropdown Drawer */}
+      {/* Mobile Ultra-Premium Fullscreen Glassmorphic Overlay */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-            className="fixed inset-x-0 top-[57px] z-40 bg-[#060911]/98 backdrop-blur-2xl border-b border-white/15 px-6 py-8 flex flex-col gap-6 md:hidden shadow-2xl"
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="fixed inset-0 z-40 bg-[#060911]/95 backdrop-blur-3xl pt-24 pb-8 px-6 flex flex-col justify-between md:hidden"
           >
-            <div className="flex flex-col gap-4 font-mono text-base tracking-wider">
+            {/* Top / Main Navigation links */}
+            <div className="flex flex-col gap-2 font-display">
+              <span className="font-mono text-[10px] text-neon-accent uppercase tracking-[0.3em] mb-2">
+                Navigation
+              </span>
               {navLinks.map((link, idx) => (
                 <motion.div
                   key={link.name}
-                  initial={{ opacity: 0, x: -15 }}
+                  initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.05 }}
+                  transition={{ delay: 0.05 + idx * 0.04, duration: 0.3 }}
                 >
                   <Link
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-2 text-foreground/80 hover:text-neon-accent border-b border-white/5 transition-colors"
+                    className="flex items-center justify-between py-3.5 text-2xl font-black text-foreground hover:text-neon-accent border-b border-white/5 transition-all group"
                   >
-                    <span>{link.name}</span>
-                    <span className="text-xs text-neon-accent font-mono opacity-60">0{idx + 1}</span>
+                    <span className="tracking-tight group-hover:translate-x-1.5 transition-transform">
+                      {link.name}
+                    </span>
+                    <span className="text-xs text-neon-accent font-mono tracking-widest opacity-60">
+                      0{idx + 1}
+                    </span>
                   </Link>
                 </motion.div>
               ))}
             </div>
 
+            {/* Bottom Status Card & Action */}
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.25 }}
-              className="pt-2"
+              transition={{ delay: 0.28, duration: 0.3 }}
+              className="pt-6 border-t border-white/10 flex flex-col gap-4"
             >
-              <a
-                href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full block py-3.5 text-center bg-neon-accent text-background font-display font-bold rounded-xl uppercase tracking-widest text-xs hover:bg-neon-cyan transition-colors shadow-[0_0_20px_rgba(56,189,248,0.3)]"
-              >
-                Hire Me
-              </a>
+              <div className="flex items-center justify-between text-xs font-mono text-foreground/60 px-1">
+                <span className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                  <span>Available for Hire</span>
+                </span>
+                <span className="text-foreground/40">Full Stack Dev</span>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3">
+                <a
+                  href="#contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="py-3.5 text-center bg-neon-accent text-background font-display font-bold rounded-xl uppercase tracking-widest text-xs hover:bg-neon-cyan transition-colors shadow-[0_0_20px_rgba(56,189,248,0.3)] active:scale-95"
+                >
+                  Hire Me
+                </a>
+                <a
+                  href="/Rushali_Jivrajani_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="py-3.5 text-center border border-white/20 text-foreground font-mono font-medium rounded-xl uppercase tracking-widest text-xs hover:border-neon-cyan hover:text-neon-cyan transition-colors active:scale-95"
+                >
+                  Resume
+                </a>
+              </div>
             </motion.div>
           </motion.div>
         )}

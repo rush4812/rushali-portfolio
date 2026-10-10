@@ -40,38 +40,38 @@ export function StackFlow() {
       {/* MOBILE VIEW (< md): Clean Vertical Connected Pipeline        */}
       {/* ============================================================ */}
       <div className="block md:hidden relative max-w-sm mx-auto px-4">
-        {/* Vertical track line */}
-        <div className="absolute left-[27px] top-4 bottom-4 w-[2px] bg-white/10" />
+        {/* Vertical track line perfectly centered with 24px indicator (16px padding + 12px center = 28px) */}
+        <div className="absolute left-[27.5px] top-4 bottom-4 w-[1px] bg-white/15" />
         
         {/* Animated vertical pulse */}
         <motion.div
-          className="absolute left-[27px] w-[2px] h-12 bg-gradient-to-b from-transparent via-neon-accent to-transparent"
+          className="absolute left-[27.5px] w-[1px] h-14 bg-gradient-to-b from-transparent via-neon-cyan to-transparent shadow-[0_0_8px_#22d3ee]"
           animate={{ top: ["0%", "85%"] }}
           transition={{ duration: 2.8, repeat: Infinity, ease: "linear" }}
         />
 
-        <div className="flex flex-col gap-5">
-          {flowSteps.map((step, i) => (
-            <div key={step.num} className="relative flex items-start gap-4">
+        <div className="flex flex-col gap-4">
+          {flowSteps.map((step) => (
+            <div key={step.num} className="relative flex items-start gap-3.5">
               {/* Node indicator */}
-              <div className="relative z-10 flex-shrink-0 w-6 h-6 rounded-full border-2 border-neon-cyan bg-background flex items-center justify-center mt-1">
+              <div className="relative z-10 flex-shrink-0 w-6 h-6 rounded-full border border-neon-cyan/70 bg-[#060911] flex items-center justify-center mt-1 shadow-[0_0_10px_rgba(34,211,238,0.3)]">
                 <div className="w-2 h-2 bg-neon-cyan rounded-full animate-pulse" />
               </div>
 
               {/* Step Card */}
-              <div className="flex-1 bg-white/[0.03] border border-white/10 rounded-lg p-3 hover:border-neon-cyan/40 transition-colors">
+              <div className="flex-1 bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-xl p-3.5 hover:border-neon-cyan/40 transition-colors shadow-lg">
                 <div className="flex items-center justify-between gap-2 mb-1">
                   <span className="font-display font-bold text-xs text-foreground tracking-wide">
                     {step.label}
                   </span>
-                  <span className="font-mono text-[9px] px-1.5 py-0.5 rounded bg-neon-accent/10 text-neon-accent font-semibold border border-neon-accent/20">
+                  <span className="font-mono text-[9px] px-2 py-0.5 rounded-full bg-neon-accent/10 text-neon-accent font-semibold border border-neon-accent/25">
                     {step.num}
                   </span>
                 </div>
-                <div className="font-mono text-[11px] text-neon-cyan/90 font-medium">
+                <div className="font-mono text-[11px] text-neon-cyan font-medium">
                   {step.tech}
                 </div>
-                <div className="font-mono text-[10px] text-foreground/50 mt-0.5">
+                <div className="font-mono text-[10px] text-foreground/60 mt-0.5 leading-snug">
                   {step.desc}
                 </div>
               </div>

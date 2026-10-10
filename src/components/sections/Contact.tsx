@@ -88,7 +88,7 @@ export default function Contact() {
             <div className="relative group">
               <input 
                 type="text" id="name" name="name" required
-                className="w-full bg-transparent border-b border-foreground/20 py-3 sm:py-4 text-foreground font-sans outline-none focus:border-neon-accent transition-colors peer"
+                className="w-full bg-transparent border-b border-foreground/20 py-3 sm:py-4 text-foreground text-base sm:text-sm font-sans outline-none focus:border-neon-accent transition-colors peer"
                 placeholder=" "
               />
               <label htmlFor="name" className="absolute left-0 top-3 sm:top-4 font-mono text-xs text-foreground/50 uppercase tracking-widest transition-all peer-focus:-top-4 peer-focus:text-[9px] peer-focus:text-neon-accent peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-[9px]">Your Name</label>
@@ -97,7 +97,7 @@ export default function Contact() {
             <div className="relative group">
               <input 
                 type="email" id="email" name="email" required
-                className="w-full bg-transparent border-b border-foreground/20 py-3 sm:py-4 text-foreground font-sans outline-none focus:border-neon-cyan transition-colors peer"
+                className="w-full bg-transparent border-b border-foreground/20 py-3 sm:py-4 text-foreground text-base sm:text-sm font-sans outline-none focus:border-neon-cyan transition-colors peer"
                 placeholder=" "
               />
               <label htmlFor="email" className="absolute left-0 top-3 sm:top-4 font-mono text-xs text-foreground/50 uppercase tracking-widest transition-all peer-focus:-top-4 peer-focus:text-[9px] peer-focus:text-neon-cyan peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-[9px]">Your Email</label>
@@ -106,7 +106,7 @@ export default function Contact() {
             <div className="relative group">
               <textarea 
                 id="message" name="message" rows={4} required
-                className="w-full bg-transparent border-b border-foreground/20 py-3 sm:py-4 text-foreground font-sans outline-none focus:border-neon-accent transition-colors resize-none peer"
+                className="w-full bg-transparent border-b border-foreground/20 py-3 sm:py-4 text-foreground text-base sm:text-sm font-sans outline-none focus:border-neon-accent transition-colors resize-none peer"
                 placeholder=" "
               />
               <label htmlFor="message" className="absolute left-0 top-3 sm:top-4 font-mono text-xs text-foreground/50 uppercase tracking-widest transition-all peer-focus:-top-4 peer-focus:text-[9px] peer-focus:text-neon-accent peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-[9px]">Your Message</label>
@@ -115,7 +115,7 @@ export default function Contact() {
             <button 
               type="submit" 
               disabled={status === "loading"}
-              className="w-full py-3.5 sm:py-4 mt-4 sm:mt-6 bg-gradient-to-r from-neon-accent to-neon-cyan text-background font-mono font-bold uppercase tracking-[0.2em] text-[10px] sm:text-xs rounded-xl hover:shadow-[0_0_30px_rgba(56,189,248,0.4)] transition-all disabled:opacity-50 flex items-center justify-center gap-3 cursor-pointer"
+              className="w-full py-3.5 sm:py-4 mt-3 sm:mt-6 bg-gradient-to-r from-neon-accent to-neon-cyan text-background font-mono font-bold uppercase tracking-[0.2em] text-[10px] sm:text-xs rounded-xl hover:shadow-[0_0_30px_rgba(56,189,248,0.4)] transition-all disabled:opacity-50 flex items-center justify-center gap-3 cursor-pointer active:scale-95"
             >
               {status === "loading" ? "SENDING..." : "SEND MESSAGE"}
             </button>

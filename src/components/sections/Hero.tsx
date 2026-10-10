@@ -93,7 +93,7 @@ export default function Hero() {
   };
 
   return (
-    <section ref={sectionRef} className="relative w-full min-h-screen pt-28 sm:pt-32 px-4 sm:px-8 lg:px-16 overflow-hidden flex flex-col justify-center pb-12" id="hero">
+    <section ref={sectionRef} className="relative w-full min-h-[100dvh] pt-24 sm:pt-32 px-4 sm:px-8 lg:px-16 overflow-hidden flex flex-col justify-center pb-12" id="hero">
       
       {/* Background Video Fallback & 3D Layer */}
       <div className="absolute inset-0 z-0">
@@ -114,17 +114,17 @@ export default function Hero() {
          <Scene />
       </div>
 
-      <div ref={containerRef} className="max-w-screen-2xl mx-auto w-full relative z-20 flex flex-col items-start justify-center h-full mt-6 sm:mt-10">
+      <div ref={containerRef} className="max-w-screen-2xl mx-auto w-full relative z-20 flex flex-col items-start justify-center h-full mt-4 sm:mt-10">
         
         {/* Dynamic Typewriter Badge & Open to Work */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 mb-6 sm:mb-8 min-h-[32px]">
+        <div className="flex flex-wrap items-center gap-2.5 sm:gap-6 mb-5 sm:mb-8 min-h-[32px]">
           <motion.div 
             initial={{ opacity: 0, x: -25 }}
             animate={isReady ? { opacity: 1, x: 0 } : { opacity: 0, x: -25 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center gap-3 font-mono text-xs sm:text-sm text-neon-accent tracking-[0.2em] uppercase font-bold"
+            className="flex items-center gap-2.5 font-mono text-[11px] sm:text-sm text-neon-accent tracking-[0.15em] sm:tracking-[0.2em] uppercase font-bold"
           >
-            <span className="w-6 h-[2px] bg-neon-accent" />
+            <span className="w-4 sm:w-6 h-[2px] bg-neon-accent" />
             <span>{currentText || portfolioData.personal.title}</span>
             <span className="inline-block w-2 h-3.5 bg-neon-cyan animate-pulse ml-0.5 shadow-[0_0_8px_#22d3ee]" />
           </motion.div>
@@ -134,7 +134,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isReady ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="px-3 py-1 bg-green-500/10 border border-green-500/20 text-green-400 font-mono text-[9px] uppercase tracking-widest rounded-full flex items-center gap-2"
+              className="px-2.5 py-0.5 sm:px-3 sm:py-1 bg-green-500/10 border border-green-500/20 text-green-400 font-mono text-[9px] uppercase tracking-widest rounded-full flex items-center gap-1.5"
             >
               <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
               Open to work
@@ -157,9 +157,9 @@ export default function Hero() {
           initial={{ opacity: 0, y: 15 }}
           animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-8 sm:mt-12 max-w-lg"
+          className="mt-6 sm:mt-12 max-w-lg"
         >
-          <p className="font-mono text-xs md:text-sm text-foreground/80 leading-relaxed uppercase tracking-widest border-l-2 border-neon-accent/40 pl-4 sm:pl-6">
+          <p className="font-mono text-xs md:text-sm text-foreground/80 leading-relaxed uppercase tracking-widest border-l-2 border-neon-accent/40 pl-3 sm:pl-6">
             {portfolioData.personal.subtitle}
           </p>
         </motion.div>
@@ -169,20 +169,28 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.7, delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-3.5 sm:gap-6 mt-10 sm:mt-14 w-full sm:w-auto pointer-events-auto"
+          className="flex flex-row gap-3 sm:gap-6 mt-8 sm:mt-14 w-full sm:w-auto pointer-events-auto"
         >
-          <a href="#projects" className="relative overflow-hidden group px-6 sm:px-8 py-3.5 sm:py-4 bg-foreground text-background font-mono text-[11px] sm:text-[10px] uppercase tracking-[0.2em] text-center hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] transition-all rounded-md">
-            <span className="relative z-10 font-bold">View Projects</span>
+          <a 
+            href="#projects" 
+            className="flex-1 sm:flex-initial relative overflow-hidden group px-5 sm:px-8 py-3 sm:py-4 bg-foreground text-background font-mono text-[11px] sm:text-[10px] uppercase tracking-[0.18em] text-center hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] transition-all rounded-xl active:scale-95"
+          >
+            <span className="relative z-10 font-bold">Projects</span>
             <div className="absolute inset-0 bg-neon-accent translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </a>
-          <a href={portfolioData.personal.links.resume} target="_blank" rel="noopener noreferrer" className="px-6 sm:px-8 py-3.5 sm:py-4 border border-foreground/20 text-foreground font-mono text-[11px] sm:text-[10px] uppercase tracking-[0.2em] text-center hover:bg-foreground/5 hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300 rounded-md">
-            Download Resume
+          <a 
+            href={portfolioData.personal.links.resume} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="flex-1 sm:flex-initial px-5 sm:px-8 py-3 sm:py-4 border border-foreground/20 text-foreground font-mono text-[11px] sm:text-[10px] uppercase tracking-[0.18em] text-center hover:bg-foreground/5 hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300 rounded-xl active:scale-95"
+          >
+            Resume
           </a>
         </motion.div>
 
       </div>
       
-      {/* Scroll indicator */}
+      {/* Desktop Scroll indicator */}
       <motion.div 
         initial={{ opacity: 0 }}
         animate={isReady ? { opacity: 1 } : { opacity: 0 }}
@@ -195,6 +203,23 @@ export default function Hero() {
             animate={{ y: [0, 48] }} 
             transition={{ repeat: Infinity, duration: 1.5, ease: "linear" }}
             className="absolute top-0 left-0 w-full h-1/2 bg-neon-accent"
+          />
+        </div>
+      </motion.div>
+
+      {/* Mobile Subtle Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={isReady ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ delay: 1.2, duration: 0.8 }}
+        className="absolute bottom-3 left-1/2 -translate-x-1/2 md:hidden z-20 flex flex-col items-center gap-1 pointer-events-none opacity-50"
+      >
+        <span className="font-mono text-[8px] uppercase tracking-[0.2em] text-foreground/40">Scroll</span>
+        <div className="w-3.5 h-6 rounded-full border border-white/20 flex items-start justify-center p-1">
+          <motion.div 
+            animate={{ y: [0, 8, 0] }}
+            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+            className="w-1 h-1.5 bg-neon-accent rounded-full"
           />
         </div>
       </motion.div>
