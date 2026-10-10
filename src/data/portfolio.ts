@@ -1,4 +1,4 @@
-import { SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiVercel, SiGit, SiFramer, SiJavascript, SiTypescript, SiRedux, SiMysql } from "react-icons/si";
+import { SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiVercel, SiGit, SiFigma, SiJavascript, SiTypescript, SiRedux, SiMysql } from "react-icons/si";
 
 export const portfolioData = {
   personal: {
@@ -63,14 +63,14 @@ export const portfolioData = {
       title: "Madhubhan Resort",
       summary: "A premium hotel booking platform with fast page loads and smooth, luxurious animations.",
       role: "Full Stack Developer",
-      tech: ["Next.js", "TypeScript", "MySQL", "Framer Motion"],
+      tech: ["Next.js", "TypeScript", "MySQL", "Figma (UI/UX)"],
       liveDemo: "#", // TODO: Add real Live Demo URL
       github: "#", // TODO: Add real GitHub URL
       coverImage: "/projects/madhubhan-cover.jpg", // TODO: Add real image
       caseStudy: {
         problem: "The resort wanted their website to feel as premium and luxurious as their physical property, but without becoming slow to load.",
         approach: "I developed the entire website focusing on smooth, cinematic scroll animations while keeping a strict check on performance and image sizes.",
-        techDecisions: "I used Framer Motion for the smooth animations and MySQL for reliable booking data persistence.",
+        techDecisions: "I designed the interfaces in Figma for an intuitive user experience, and used MySQL for reliable booking data persistence.",
         result: "Achieved a 98+ Lighthouse performance score even with heavy, high-quality images and videos.",
         gallery: []
       }
@@ -173,7 +173,7 @@ export const portfolioData = {
         { name: "React", icon: SiReact, color: "#61DAFB", category: "frontend" },
         { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF", category: "frontend" },
         { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4", category: "frontend" },
-        { name: "Framer", icon: SiFramer, color: "#0055FF", category: "frontend" },
+        { name: "Figma (UI/UX)", icon: SiFigma, color: "#F24E1E", category: "frontend" },
         { name: "Redux", icon: SiRedux, color: "#764ABC", category: "frontend" }
       ]
     },

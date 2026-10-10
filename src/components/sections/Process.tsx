@@ -15,9 +15,9 @@ const processSteps = [
   {
     step: "02",
     phase: "Phase 02",
-    title: "Building the Frontend",
-    desc: "I create beautiful, responsive, and smooth user interfaces using tools like Next.js, React, and Framer Motion.",
-    highlights: ["Component Systems", "State Management", "Fluid Animations"],
+    title: "UI Design & Frontend",
+    desc: "I design intuitive wireframes in Figma and build fast, responsive user interfaces using Next.js, React, and modern AI development tools.",
+    highlights: ["Figma UI/UX", "Component Systems", "AI-Assisted Dev"],
     icon: Code2,
     accent: "#22d3ee",
   },

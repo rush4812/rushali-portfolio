@@ -41,7 +41,7 @@ export const projectsData: Project[] = [
     year: "2023", // TODO: confirm
     role: "Frontend Developer", // TODO: confirm
     summary: "An interactive digital archive for one of India's premier textile museums.", // TODO: confirm
-    tech: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"], // TODO: confirm
+    tech: ["React", "TypeScript", "Tailwind CSS", "Figma / UI Design"], // TODO: confirm
     accent: "#818cf8", // neon-accent
     media: { type: "image", src: "" }, // TODO: add screenshot
     liveUrl: "https://calicomuseum.org", // TODO: confirm

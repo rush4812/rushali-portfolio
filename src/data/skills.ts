@@ -22,7 +22,7 @@ export const skillsData: Skill[] = [
     color: "#61DAFB",
     level: "daily", // TODO: confirm
     usedIn: [{ project: "Amanta Healthcare", note: "Core UI development", href: "#projects" }], // TODO: confirm
-    relatedTo: ["nextjs", "redux", "tailwind", "framer"],
+    relatedTo: ["nextjs", "redux", "tailwind", "figma"],
   },
   {
     id: "nextjs",
@@ -42,17 +42,27 @@ export const skillsData: Skill[] = [
     color: "#06B6D4",
     level: "daily", // TODO: confirm
     usedIn: [{ project: "All Projects", note: "Primary styling solution", href: "#projects" }], // TODO: confirm
-    relatedTo: ["react", "nextjs", "framer"],
+    relatedTo: ["react", "nextjs", "figma"],
   },
   {
-    id: "framer",
-    name: "Framer Motion",
+    id: "figma",
+    name: "Figma (UI/UX)",
     category: "frontend",
-    icon: "SiFramer",
-    color: "#0055FF",
-    level: "comfortable", // TODO: confirm
-    usedIn: [{ project: "Portfolio", note: "Complex page transitions", href: "#projects" }], // TODO: confirm
-    relatedTo: ["react"],
+    icon: "SiFigma",
+    color: "#F24E1E",
+    level: "daily",
+    usedIn: [{ project: "Design & Prototyping", note: "Wireframing, UI/UX flows & prototypes", href: "#projects" }],
+    relatedTo: ["react", "tailwind"],
+  },
+  {
+    id: "ai-tools",
+    name: "AI Tools",
+    category: "frontend",
+    icon: "FaBrain",
+    color: "#10A37F",
+    level: "daily",
+    usedIn: [{ project: "Productivity", note: "AI-assisted development, prompt design & rapid prototyping", href: "#projects" }],
+    relatedTo: ["nextjs", "react"],
   },
   {
     id: "redux",

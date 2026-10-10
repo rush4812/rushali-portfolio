@@ -205,7 +205,7 @@ export async function submitContact(prevState: any, formData: FormData) {
                   </tr>
                   <tr>
                     <td style="padding: 5px 0; font-weight: 600; color: #ffffff;">Frontend:</td>
-                    <td style="padding: 5px 0; color: #e2e8f0;">Next.js, React.js, TypeScript, Tailwind CSS, Framer Motion</td>
+                    <td style="padding: 5px 0; color: #e2e8f0;">Next.js, React.js, TypeScript, Tailwind CSS, Figma &amp; AI Tools</td>
                   </tr>
                   <tr>
                     <td style="padding: 5px 0; font-weight: 600; color: #ffffff;">Backend &amp; APIs:</td>

@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     "MongoDB",
     "MySQL",
     "Web Developer Portfolio",
+    "Figma",
+    "UI/UX Design",
+    "AI Tools",
     "Software Engineer",
     "India"
   ],
@@ -110,6 +113,9 @@ export default function RootLayout({
       "MongoDB",
       "MySQL",
       "Tailwind CSS",
+      "Figma",
+      "UI/UX Design",
+      "AI Tools",
       "Full Stack Development"
     ]
   };
