@@ -33,7 +33,7 @@ export function SkillCard({ skill, onHover, isDimmed, index }: SkillCardProps) {
       className={`relative w-full transition-opacity duration-300 ${isDimmed ? "opacity-35" : "opacity-100"}`}
     >
       <div
-        className="group relative w-full flex flex-col items-center justify-center gap-3 p-5 bg-[#0b0f17]/90 hover:bg-[#101623] border border-white/10 hover:border-white/30 rounded-2xl transition-all duration-300 cursor-pointer overflow-hidden z-20 shadow-md hover:shadow-xl hover:-translate-y-1.5"
+        className="group relative w-full flex flex-col items-center justify-center gap-2 sm:gap-3 p-3.5 sm:p-5 bg-[#0b0f17]/90 hover:bg-[#101623] border border-white/10 hover:border-white/30 rounded-xl sm:rounded-2xl transition-all duration-300 cursor-pointer overflow-hidden z-20 shadow-md hover:shadow-xl hover:-translate-y-1.5"
         style={{
           boxShadow: isFocused ? `0 0 24px ${skill.color}35` : undefined,
           borderColor: isFocused ? `${skill.color}90` : undefined,
@@ -56,15 +56,15 @@ export function SkillCard({ skill, onHover, isDimmed, index }: SkillCardProps) {
         />
 
         {/* Icon Container */}
-        <div className="relative w-12 h-12 flex items-center justify-center">
+        <div className="relative w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center">
           {/* Default greyscale */}
           <Icon 
-            size={30} 
+            size={26} 
             className="absolute z-10 text-foreground/45 group-hover:opacity-0 transition-opacity duration-300" 
           />
           {/* Colored brand icon on hover */}
           <Icon 
-            size={30} 
+            size={26} 
             className="absolute z-10 opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" 
             style={{ 
               color: skill.color, 
@@ -74,12 +74,12 @@ export function SkillCard({ skill, onHover, isDimmed, index }: SkillCardProps) {
         </div>
 
         {/* Name */}
-        <span className="font-mono text-xs font-semibold text-foreground/80 group-hover:text-foreground transition-colors text-center w-full truncate">
+        <span className="font-mono text-[11px] sm:text-xs font-semibold text-foreground/80 group-hover:text-foreground transition-colors text-center w-full truncate">
           {skill.name}
         </span>
 
         {/* Category micro-tag */}
-        <span className="font-mono text-[9px] text-foreground/40 uppercase tracking-wider group-hover:text-neon-accent transition-colors">
+        <span className="font-mono text-[8px] sm:text-[9px] text-foreground/40 uppercase tracking-wider group-hover:text-neon-accent transition-colors">
           {skill.category}
         </span>
       </div>
@@ -92,7 +92,7 @@ export function SkillCard({ skill, onHover, isDimmed, index }: SkillCardProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 8, scale: 0.95 }}
             transition={{ duration: 0.15 }}
-            className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-60 p-3.5 bg-[#090d14] border border-white/15 rounded-xl shadow-2xl z-50 pointer-events-none"
+            className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-52 sm:w-60 p-3 sm:p-3.5 bg-[#090d14] border border-white/15 rounded-xl shadow-2xl z-50 pointer-events-none max-w-[88vw]"
           >
             <div className="flex flex-col gap-2">
               <div className="flex justify-between items-center border-b border-white/10 pb-1.5">

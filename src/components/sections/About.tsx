@@ -20,7 +20,7 @@ export default function About() {
   return (
     <section 
       id="about" 
-      className="relative w-full py-28 md:py-36 px-6 overflow-hidden bg-[#060911] border-t border-white/5"
+      className="relative w-full py-16 sm:py-24 md:py-32 px-4 sm:px-6 overflow-hidden bg-[#060911] border-t border-white/5"
     >
       {/* Dynamic Ambient Background Glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] bg-gradient-to-tr from-cyan-500/10 via-neon-accent/10 to-indigo-500/10 blur-[130px] rounded-full pointer-events-none" />
@@ -38,13 +38,13 @@ export default function About() {
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Section Top Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-8 border-b border-white/10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16 pb-6 sm:pb-8 border-b border-white/10">
           <div>
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-neon-accent/10 border border-neon-accent/30 text-neon-accent font-mono text-xs tracking-wider uppercase mb-4">
+            <div className="inline-flex items-center gap-2.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-neon-accent/10 border border-neon-accent/30 text-neon-accent font-mono text-[11px] sm:text-xs tracking-wider uppercase mb-3 sm:mb-4">
               <span className="w-2 h-2 rounded-full bg-neon-accent animate-ping" />
               <span>Identity & Engineering Mindset</span>
             </div>
-            <h2 className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-foreground tracking-tight">
+            <h2 className="font-display font-black text-3xl sm:text-5xl md:text-6xl text-foreground tracking-tight">
               Driven By Logic. <br />
               <span className="bg-gradient-to-r from-neon-accent via-cyan-300 to-indigo-400 bg-clip-text text-transparent">
                 Always Ready To Learn.
@@ -58,7 +58,7 @@ export default function About() {
         </div>
 
         {/* BENTO ROW 1: Bio Story + Interactive Live Terminal */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 mb-6 sm:mb-8">
           
           {/* Left Column: Personal Narrative & Core Strength */}
           <motion.div 
@@ -66,22 +66,22 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-7 flex flex-col justify-between p-8 sm:p-10 rounded-3xl bg-gradient-to-b from-[#0d1424]/90 to-[#090e1a]/95 border border-white/10 relative overflow-hidden shadow-2xl group"
+            className="lg:col-span-7 flex flex-col justify-between p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-gradient-to-b from-[#0d1424]/90 to-[#090e1a]/95 border border-white/10 relative overflow-hidden shadow-2xl group"
           >
             {/* Ambient accent inside card */}
             <div className="absolute top-0 right-0 w-80 h-80 bg-neon-accent/5 rounded-full blur-3xl pointer-events-none group-hover:bg-neon-accent/10 transition-colors duration-500" />
 
             <div>
-              <div className="flex items-center gap-3 text-foreground/50 font-mono text-xs uppercase tracking-widest mb-6">
-                <GraduationCap className="text-neon-accent" size={18} />
+              <div className="flex items-center gap-2.5 text-foreground/50 font-mono text-[11px] sm:text-xs uppercase tracking-widest mb-4 sm:mb-6">
+                <GraduationCap className="text-neon-accent" size={16} />
                 <span>MCA Graduate • Full Stack Software Engineer</span>
               </div>
 
-              <h3 className="font-display font-bold text-2xl sm:text-3xl text-foreground mb-6 leading-snug">
+              <h3 className="font-display font-bold text-xl sm:text-2xl md:text-3xl text-foreground mb-4 sm:mb-6 leading-snug">
                 Bridging robust backend engineering with fast, intuitive interfaces.
               </h3>
 
-              <div className="space-y-4 font-mono text-xs sm:text-sm text-foreground/75 leading-relaxed">
+              <div className="space-y-3.5 sm:space-y-4 font-mono text-xs sm:text-sm text-foreground/75 leading-relaxed">
                 <p>
                   Hello! I’m <span className="text-foreground font-semibold">Rushali Jivrajani</span>. With a Master of Computer Application (MCA) degree and hands-on experience shipping real-world web applications, I build software that solves actual business friction.
                 </p>
@@ -95,15 +95,15 @@ export default function About() {
             </div>
 
             {/* Quick Badges Ribbon */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-8 mt-8 border-t border-white/10">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-white/10">
               {[
                 { value: "MCA", label: "Master of Computer Apps" },
                 { value: "6+", label: "Shipped Projects" },
                 { value: "3 DBs", label: "PgSQL • MySQL • Mongo" },
                 { value: "100%", label: "Learning Agility" },
               ].map((stat, idx) => (
-                <div key={idx} className="p-3 rounded-xl bg-white/[0.02] border border-white/5">
-                  <div className="font-display font-extrabold text-xl text-foreground">{stat.value}</div>
+                <div key={idx} className="p-2.5 sm:p-3 rounded-xl bg-white/[0.02] border border-white/5">
+                  <div className="font-display font-extrabold text-lg sm:text-xl text-foreground">{stat.value}</div>
                   <div className="font-mono text-[9px] uppercase tracking-wider text-foreground/50 mt-1">{stat.label}</div>
                 </div>
               ))}
@@ -116,56 +116,59 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="lg:col-span-5 flex flex-col rounded-3xl bg-[#090d16] border border-white/15 overflow-hidden shadow-2xl"
+            className="lg:col-span-5 flex flex-col rounded-2xl sm:rounded-3xl bg-[#090d16] border border-white/15 overflow-hidden shadow-2xl"
           >
             {/* Terminal Header */}
-            <div className="flex items-center justify-between px-5 py-3.5 bg-[#05080f] border-b border-white/10">
+            <div className="flex items-center justify-between px-4 sm:px-5 py-3 sm:py-3.5 bg-[#05080f] border-b border-white/10">
               <div className="flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-rose-500/80 inline-block" />
-                <span className="w-3 h-3 rounded-full bg-amber-500/80 inline-block" />
-                <span className="w-3 h-3 rounded-full bg-emerald-500/80 inline-block" />
-                <span className="ml-3 font-mono text-[11px] text-foreground/40">rushali.config.ts</span>
+                <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-rose-500/80 inline-block" />
+                <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-500/80 inline-block" />
+                <span className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-emerald-500/80 inline-block" />
+                <span className="ml-2 sm:ml-3 font-mono text-[10px] sm:text-[11px] text-foreground/40">rushali.config.ts</span>
               </div>
-              <div className="flex items-center gap-1.5 text-[10px] font-mono text-neon-accent bg-neon-accent/10 px-2.5 py-1 rounded-md">
+              <div className="flex items-center gap-1.5 text-[9px] sm:text-[10px] font-mono text-neon-accent bg-neon-accent/10 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md">
                 <span className="w-1.5 h-1.5 rounded-full bg-neon-accent animate-pulse" />
                 <span>LIVE STATUS</span>
               </div>
             </div>
 
-            {/* Terminal Tab Switchers */}
-            <div className="flex border-b border-white/10 bg-[#070b13] px-3 pt-2 gap-1 font-mono text-xs">
+            {/* Terminal Tab Switchers with responsive labels and horizontal scroll */}
+            <div className="flex border-b border-white/10 bg-[#070b13] px-2 sm:px-3 pt-2 gap-1 font-mono text-xs overflow-x-auto no-scrollbar">
               <button 
                 onClick={() => setActiveTab("agility")}
-                className={`px-3 py-1.5 rounded-t-lg transition-colors flex items-center gap-1.5 ${
+                className={`px-2.5 sm:px-3 py-1.5 rounded-t-lg transition-colors flex items-center gap-1.5 shrink-0 ${
                   activeTab === "agility" 
                     ? "bg-[#0b101c] text-neon-accent border-t border-x border-neon-accent/30 font-semibold" 
                     : "text-foreground/50 hover:text-foreground"
                 }`}
               >
                 <Zap size={13} />
-                <span>TechAgility.ts</span>
+                <span className="hidden sm:inline">TechAgility.ts</span>
+                <span className="sm:hidden">Agility</span>
               </button>
               <button 
                 onClick={() => setActiveTab("profile")}
-                className={`px-3 py-1.5 rounded-t-lg transition-colors flex items-center gap-1.5 ${
+                className={`px-2.5 sm:px-3 py-1.5 rounded-t-lg transition-colors flex items-center gap-1.5 shrink-0 ${
                   activeTab === "profile" 
                     ? "bg-[#0b101c] text-neon-accent border-t border-x border-neon-accent/30 font-semibold" 
                     : "text-foreground/50 hover:text-foreground"
                 }`}
               >
                 <Code2 size={13} />
-                <span>Profile.json</span>
+                <span className="hidden sm:inline">Profile.json</span>
+                <span className="sm:hidden">Profile</span>
               </button>
               <button 
                 onClick={() => setActiveTab("philosophy")}
-                className={`px-3 py-1.5 rounded-t-lg transition-colors flex items-center gap-1.5 ${
+                className={`px-2.5 sm:px-3 py-1.5 rounded-t-lg transition-colors flex items-center gap-1.5 shrink-0 ${
                   activeTab === "philosophy" 
                     ? "bg-[#0b101c] text-neon-accent border-t border-x border-neon-accent/30 font-semibold" 
                     : "text-foreground/50 hover:text-foreground"
                 }`}
               >
                 <Cpu size={13} />
-                <span>WorkEthic.ts</span>
+                <span className="hidden sm:inline">WorkEthic.ts</span>
+                <span className="sm:hidden">Ethic</span>
               </button>
             </div>
 
@@ -296,20 +299,20 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative w-full rounded-3xl p-8 sm:p-12 bg-gradient-to-r from-[#0d172a] via-[#091224] to-[#0d162d] border border-cyan-500/30 overflow-hidden shadow-2xl"
+          className="relative w-full rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12 bg-gradient-to-r from-[#0d172a] via-[#091224] to-[#0d162d] border border-cyan-500/30 overflow-hidden shadow-2xl"
         >
           {/* Glowing Shimmer Bar */}
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse" />
           
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
             
             <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-neon-cyan font-mono text-xs uppercase tracking-wider mb-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-neon-cyan font-mono text-[11px] sm:text-xs uppercase tracking-wider mb-3 sm:mb-4">
                 <Rocket size={14} className="text-neon-cyan" />
                 <span>Superpower & Growth Stance</span>
               </div>
               
-              <h3 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-foreground mb-4 leading-tight">
+              <h3 className="font-display font-black text-2xl sm:text-3xl md:text-5xl text-foreground mb-3 sm:mb-4 leading-tight">
                 Ready To Learn & Master <br className="hidden sm:block" />
                 <span className="text-neon-accent">Any New Technology.</span>
               </h3>
@@ -321,8 +324,8 @@ export default function About() {
             </div>
 
             {/* Right side: Interactive "Tech Horizons" Pills */}
-            <div className="lg:col-span-5 flex flex-col gap-3 p-6 rounded-2xl bg-black/40 border border-white/10 backdrop-blur-sm">
-              <div className="flex items-center justify-between text-xs font-mono text-foreground/60 pb-3 border-b border-white/10">
+            <div className="lg:col-span-5 flex flex-col gap-3 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-black/40 border border-white/10 backdrop-blur-sm">
+              <div className="flex items-center justify-between text-[11px] sm:text-xs font-mono text-foreground/60 pb-2.5 sm:pb-3 border-b border-white/10">
                 <span className="flex items-center gap-2">
                   <Flame size={14} className="text-amber-400" />
                   <span>Always Expanding Horizon</span>
@@ -330,7 +333,7 @@ export default function About() {
                 <span className="text-neon-accent text-[10px]">Active Learner</span>
               </div>
 
-              <div className="flex flex-wrap gap-2 pt-2">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1.5 sm:pt-2">
                 {[
                   "AI & LLM API Integration",
                   "Cloud Microservices",
@@ -343,7 +346,7 @@ export default function About() {
                 ].map((item, idx) => (
                   <span 
                     key={idx}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/[0.04] hover:bg-neon-accent/15 border border-white/10 hover:border-neon-accent/40 text-foreground/80 hover:text-foreground font-mono text-xs transition-all duration-300 cursor-default"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-white/[0.04] hover:bg-neon-accent/15 border border-white/10 hover:border-neon-accent/40 text-foreground/80 hover:text-foreground font-mono text-[11px] sm:text-xs transition-all duration-300 cursor-default"
                   >
                     <CheckCircle2 size={12} className="text-neon-accent shrink-0" />
                     <span>{item}</span>

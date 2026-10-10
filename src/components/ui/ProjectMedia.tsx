@@ -5,7 +5,7 @@ export function ProjectMedia({ project }: { project: Project }) {
   const hasMedia = project.media.src !== "";
 
   return (
-    <div className="w-full h-64 md:h-full min-h-[300px] bg-background border-b md:border-b-0 md:border-r border-white/10 relative overflow-hidden flex flex-col group/media pointer-events-none md:pointer-events-auto">
+    <div className="w-full h-40 sm:h-52 md:h-full md:min-h-[300px] bg-background border-b md:border-b-0 md:border-r border-white/10 relative overflow-hidden flex flex-col group/media pointer-events-none md:pointer-events-auto">
       {/* Browser Top Bar */}
       <div className="h-8 w-full bg-white/5 border-b border-white/5 flex items-center px-4 gap-1.5 shrink-0">
         <div className="w-2.5 h-2.5 rounded-full bg-red-500/80" />

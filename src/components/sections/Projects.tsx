@@ -99,12 +99,12 @@ export default function Projects() {
       <div className="absolute inset-0 z-0 bg-gradient-to-b from-background via-transparent to-background pointer-events-none" />
 
       {/* Header & Counter */}
-      <div className="absolute top-20 md:top-24 left-6 md:left-12 lg:left-24 z-20 flex items-center gap-6">
-        <h2 className="font-mono text-neon-accent text-xs md:text-sm tracking-[0.3em] uppercase flex items-center gap-3">
-          <span className="w-8 md:w-12 h-[1px] bg-neon-accent" />
+      <div className="absolute top-16 sm:top-20 md:top-24 left-4 sm:left-6 md:left-12 lg:left-24 z-20 flex items-center gap-4 sm:gap-6">
+        <h2 className="font-mono text-neon-accent text-[11px] sm:text-xs md:text-sm tracking-[0.25em] sm:tracking-[0.3em] uppercase flex items-center gap-2.5 sm:gap-3">
+          <span className="w-6 sm:w-8 md:w-12 h-[1px] bg-neon-accent" />
           Selected Works
         </h2>
-        <div className="font-mono text-lg md:text-2xl font-light text-foreground flex items-center gap-2 relative overflow-hidden h-8" aria-live="polite">
+        <div className="font-mono text-base sm:text-lg md:text-2xl font-light text-foreground flex items-center gap-1.5 sm:gap-2 relative overflow-hidden h-7 sm:h-8" aria-live="polite">
           <AnimatePresence mode="popLayout">
             <motion.span
               key={activeIndex}
@@ -125,13 +125,13 @@ export default function Projects() {
       <div 
         ref={scrollWrapperRef}
         onScroll={handleMobileScroll}
-        className="flex h-full items-center px-4 md:px-[11vw] lg:px-[15vw] overflow-x-auto md:overflow-hidden snap-x snap-mandatory hide-scrollbar pt-28 pb-20 md:py-0"
+        className="flex h-full items-center px-3 sm:px-4 md:px-[11vw] lg:px-[15vw] overflow-x-auto md:overflow-hidden snap-x snap-mandatory hide-scrollbar pt-24 sm:pt-28 pb-16 sm:pb-20 md:py-0"
         style={{ width: isDesktop ? "max-content" : "100%" }}
       >
         {projectsData.map((project, i) => (
           <div 
             key={project.id} 
-            className="project-panel shrink-0 w-[100vw] md:w-[78vw] lg:w-[70vw] px-4 md:px-8 flex justify-center items-center snap-center h-full"
+            className="project-panel shrink-0 w-[100vw] md:w-[78vw] lg:w-[70vw] px-2 sm:px-4 md:px-8 flex justify-center items-center snap-center h-full"
             data-cursor="view"
           >
             <ProjectCard project={project} isActive={activeIndex === i} />
@@ -140,7 +140,7 @@ export default function Projects() {
       </div>
 
       {/* Footer Controls */}
-      <div className="absolute bottom-6 md:bottom-8 left-6 md:left-12 lg:left-24 right-6 md:right-12 lg:right-24 z-20 flex items-center justify-between gap-4">
+      <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-4 sm:left-6 md:left-12 lg:left-24 right-4 sm:right-6 md:right-12 lg:right-24 z-20 flex items-center justify-between gap-4">
         
         {/* Progress Segments */}
         <div className="w-auto">

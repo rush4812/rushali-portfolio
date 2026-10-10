@@ -3,10 +3,10 @@ import { Project } from "@/data/projects";
 
 export function ProjectInfo({ project }: { project: Project }) {
   return (
-    <div className="w-full flex flex-col justify-between p-5 sm:p-6 md:p-7 lg:p-8 h-full">
+    <div className="w-full flex flex-col justify-between p-4 sm:p-6 md:p-7 lg:p-8 h-full">
       <div className="flex flex-col items-start w-full">
         {/* Meta Row */}
-        <div className="font-mono text-[10px] md:text-[11px] text-foreground/60 uppercase tracking-widest mb-2 md:mb-3 flex flex-wrap items-center gap-2">
+        <div className="font-mono text-[10px] md:text-[11px] text-foreground/60 uppercase tracking-widest mb-1.5 sm:mb-3 flex flex-wrap items-center gap-1.5 sm:gap-2">
           <span style={{ color: project.accent }} className="font-semibold">{project.type}</span>
           <span>·</span>
           <span>{project.year}</span>
@@ -15,20 +15,20 @@ export function ProjectInfo({ project }: { project: Project }) {
         </div>
         
         {/* Title */}
-        <h3 className="font-display text-2xl sm:text-3xl md:text-4xl font-black text-foreground mb-2 md:mb-3 leading-tight tracking-tight">
+        <h3 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-foreground mb-1.5 sm:mb-3 leading-tight tracking-tight">
           {project.title}
         </h3>
         
         {/* Summary */}
-        <p className="font-mono text-xs sm:text-sm text-foreground/80 leading-relaxed mb-3 md:mb-4 font-normal">
+        <p className="font-mono text-xs sm:text-sm text-foreground/80 leading-relaxed mb-2.5 sm:mb-4 font-normal line-clamp-2 sm:line-clamp-none">
           {project.summary}
         </p>
         
         {/* Problem/Result Highlights */}
         {(project.problem || project.result) && (
-          <ul className="font-mono text-[11px] sm:text-xs text-foreground/70 space-y-1.5 mb-4 border-l-2 pl-3" style={{ borderColor: `${project.accent}50` }}>
+          <ul className="font-mono text-[10px] sm:text-xs text-foreground/70 space-y-1 sm:space-y-1.5 mb-3 sm:mb-4 border-l-2 pl-2.5 sm:pl-3" style={{ borderColor: `${project.accent}50` }}>
             {project.problem && (
-              <li className="line-clamp-2">
+              <li className="line-clamp-1 sm:line-clamp-2">
                 <strong className="text-foreground/90 font-medium">Problem:</strong> {project.problem}
               </li>
             )}
@@ -41,11 +41,11 @@ export function ProjectInfo({ project }: { project: Project }) {
         )}
         
         {/* Tech Chips */}
-        <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 md:mb-6">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-3 md:mb-6">
           {project.tech.map((t) => (
             <span 
               key={t} 
-              className="px-2.5 py-0.5 sm:px-3 sm:py-1 bg-white/5 border border-white/10 rounded-full font-mono text-[10px] sm:text-[11px] text-foreground/85 tracking-wider uppercase"
+              className="px-2 py-0.5 sm:px-3 sm:py-1 bg-white/5 border border-white/10 rounded-full font-mono text-[9px] sm:text-[11px] text-foreground/85 tracking-wider uppercase"
             >
               {t}
             </span>

@@ -43,7 +43,7 @@ const processSteps = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-24 md:py-32 relative w-full px-6 overflow-hidden bg-background border-t border-white/5">
+    <section id="process" className="py-16 md:py-32 relative w-full px-4 sm:px-6 overflow-hidden bg-background border-t border-white/5">
       
       {/* Background Subtle Gradient */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-neon-cyan/5 blur-[140px] rounded-full pointer-events-none" />
@@ -51,7 +51,7 @@ export default function Process() {
       <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16 md:mb-20">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16 md:mb-20">
           <motion.div 
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -68,7 +68,7 @@ export default function Process() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-foreground mb-4 tracking-tight"
+            className="font-display font-black text-3xl sm:text-5xl md:text-6xl text-foreground mb-3 sm:mb-4 tracking-tight"
           >
             Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-accent to-neon-cyan">Pipeline.</span>
           </motion.h2>
@@ -78,7 +78,7 @@ export default function Process() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="font-mono text-sm text-foreground/60 leading-relaxed"
+            className="font-mono text-xs sm:text-sm text-foreground/60 leading-relaxed px-2"
           >
             A disciplined 4-stage engineering methodology designed for speed, clarity, and rock-solid code quality.
           </motion.p>
@@ -112,7 +112,7 @@ export default function Process() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {processSteps.map((step, i) => {
             const Icon = step.icon;
             return (
@@ -120,9 +120,9 @@ export default function Process() {
                 key={step.step}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
+                viewport={{ once: true, margin: "-30px" }}
                 transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
-                className="group relative flex flex-col justify-between p-6 bg-[#0c1018]/90 hover:bg-[#111724] border border-white/10 hover:border-neon-cyan/40 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_35px_rgba(34,211,238,0.12)]"
+                className="group relative flex flex-col justify-between p-5 sm:p-6 bg-[#0c1018]/90 hover:bg-[#111724] border border-white/10 hover:border-neon-cyan/40 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_35px_rgba(34,211,238,0.12)]"
               >
                 {/* Subtle Radial Glow on Hover */}
                 <div 

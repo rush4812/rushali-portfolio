@@ -34,7 +34,7 @@ export default function Hero() {
   };
 
   return (
-    <section ref={sectionRef} className="relative w-full min-h-screen pt-32 px-6 lg:px-16 overflow-hidden flex flex-col justify-center pb-12" id="hero">
+    <section ref={sectionRef} className="relative w-full min-h-screen pt-28 sm:pt-32 px-4 sm:px-8 lg:px-16 overflow-hidden flex flex-col justify-center pb-12" id="hero">
       
       {/* Background Video Fallback & 3D Layer */}
       <div className="absolute inset-0 z-0">
@@ -55,9 +55,9 @@ export default function Hero() {
          <Scene />
       </div>
 
-      <div ref={containerRef} className="max-w-screen-2xl mx-auto w-full relative z-20 flex flex-col items-start justify-center h-full mt-10">
+      <div ref={containerRef} className="max-w-screen-2xl mx-auto w-full relative z-20 flex flex-col items-start justify-center h-full mt-6 sm:mt-10">
         
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 mb-8">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 mb-6 sm:mb-8">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -83,10 +83,10 @@ export default function Hero() {
 
         {/* Staggered Split-Text Typography */}
         <div className="flex flex-col items-start z-10 pointer-events-none">
-          <h1 className="font-display font-bold text-[11vw] md:text-[9vw] leading-[0.85] tracking-[-0.04em] text-foreground uppercase flex overflow-hidden">
+          <h1 className="font-display font-bold text-[13vw] sm:text-[11vw] md:text-[9vw] leading-[0.88] tracking-[-0.04em] text-foreground uppercase flex overflow-hidden">
             {splitText(firstName)}
           </h1>
-          <h1 className="font-display font-bold text-[11vw] md:text-[9vw] leading-[0.85] tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-r from-neon-accent to-neon-cyan uppercase ml-0 md:ml-12 flex overflow-hidden">
+          <h1 className="font-display font-bold text-[13vw] sm:text-[11vw] md:text-[9vw] leading-[0.88] tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-r from-neon-accent to-neon-cyan uppercase ml-0 sm:ml-6 md:ml-12 flex overflow-hidden">
             {splitText(lastName)}
           </h1>
         </div>
@@ -95,9 +95,9 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 2.0 }}
-          className="mt-12 max-w-lg"
+          className="mt-8 sm:mt-12 max-w-lg"
         >
-          <p className="font-mono text-xs md:text-sm text-foreground/80 leading-relaxed uppercase tracking-widest border-l border-foreground/30 pl-6">
+          <p className="font-mono text-xs md:text-sm text-foreground/80 leading-relaxed uppercase tracking-widest border-l border-foreground/30 pl-4 sm:pl-6">
             {portfolioData.personal.subtitle}
           </p>
         </motion.div>
@@ -106,13 +106,13 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2.2 }}
-          className="flex flex-wrap gap-6 mt-16 pointer-events-auto"
+          className="flex flex-col sm:flex-row gap-3.5 sm:gap-6 mt-10 sm:mt-16 w-full sm:w-auto pointer-events-auto"
         >
-          <a href="#projects" className="relative overflow-hidden group px-8 py-4 bg-foreground text-background font-mono text-[10px] uppercase tracking-[0.2em] hover:shadow-[0_0_20px_rgba(124,140,255,0.3)] transition-all">
+          <a href="#projects" className="relative overflow-hidden group px-6 sm:px-8 py-3.5 sm:py-4 bg-foreground text-background font-mono text-[11px] sm:text-[10px] uppercase tracking-[0.2em] text-center hover:shadow-[0_0_20px_rgba(124,140,255,0.3)] transition-all">
             <span className="relative z-10 font-bold">View Projects</span>
             <div className="absolute inset-0 bg-neon-accent translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </a>
-          <a href={portfolioData.personal.links.resume} target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-foreground/20 text-foreground font-mono text-[10px] uppercase tracking-[0.2em] hover:bg-foreground/5 hover:border-neon-accent hover:text-neon-accent transition-all duration-300">
+          <a href={portfolioData.personal.links.resume} target="_blank" rel="noopener noreferrer" className="px-6 sm:px-8 py-3.5 sm:py-4 border border-foreground/20 text-foreground font-mono text-[11px] sm:text-[10px] uppercase tracking-[0.2em] text-center hover:bg-foreground/5 hover:border-neon-accent hover:text-neon-accent transition-all duration-300">
             Download Resume
           </a>
         </motion.div>

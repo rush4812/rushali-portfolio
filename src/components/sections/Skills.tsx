@@ -38,32 +38,32 @@ const strengths = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 relative w-full px-6">
+    <section id="skills" className="py-16 sm:py-24 relative w-full px-4 sm:px-6">
       <div className="max-w-6xl mx-auto relative z-10">
         <motion.h2 
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="font-mono text-neon-accent text-xs tracking-[0.3em] uppercase mb-16 flex items-center gap-4"
+          className="font-mono text-neon-accent text-xs tracking-[0.3em] uppercase mb-8 sm:mb-14 flex items-center gap-3 sm:gap-4"
         >
           <span className="w-8 h-[1px] bg-neon-accent" />
           Core Competencies
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {strengths.map((str, i) => {
             const Icon = str.icon;
             return (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: i * 0.1, ease: "easeOut" }}
-                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: i * 0.08, ease: "easeOut" }}
+                viewport={{ once: true, margin: "-30px" }}
                 className="w-full h-full"
               >
                 <TiltCard className="w-full h-full group">
-                  <div className="h-full bg-white/[0.02] backdrop-blur-md p-8 border border-white/5 group-hover:border-neon-cyan/50 transition-all duration-500 rounded-2xl relative overflow-hidden flex flex-col justify-between min-h-[220px] shadow-2xl">
+                  <div className="h-full bg-white/[0.02] backdrop-blur-md p-6 sm:p-8 border border-white/5 group-hover:border-neon-cyan/50 transition-all duration-500 rounded-2xl relative overflow-hidden flex flex-col justify-between min-h-[190px] sm:min-h-[220px] shadow-2xl">
                     
                     {/* Glowing hover background */}
                     <div className="absolute inset-0 bg-gradient-to-br from-neon-cyan/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
