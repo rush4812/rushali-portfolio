@@ -23,6 +23,9 @@ export default function Preloader() {
         document.body.style.overflow = ""; // Unlock scroll
         // Force window to scroll to top to reset any accidental scrolling
         window.scrollTo(0, 0);
+        if (typeof window !== "undefined") {
+          window.dispatchEvent(new CustomEvent("preloaderComplete"));
+        }
       }, 1200);
       return () => clearTimeout(t);
     }

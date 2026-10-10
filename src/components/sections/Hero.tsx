@@ -1,32 +1,91 @@
 "use client";
 import { motion } from "framer-motion";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef, useState } from "react";
 import { portfolioData } from "@/data/portfolio";
 import dynamic from "next/dynamic";
 
 const Scene = dynamic(() => import("@/components/3d/Scene"), { ssr: false });
 
+const animatedTitles = [
+  "Full Stack Developer",
+  "Next.js & React Specialist",
+  "Node.js & Database Engineer",
+  "Problem Solver & Fast Learner"
+];
+
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
-  
+
+  // Synchronization with preloader
+  const [isReady, setIsReady] = useState(false);
+
+  // Typewriter effect state
+  const [titleIdx, setTitleIdx] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
   useEffect(() => {
-    // Scroll animation removed to prevent overlap with the marquee slider
+    // Listen for preloader completion
+    const onPreloaderDone = () => setIsReady(true);
+    window.addEventListener("preloaderComplete", onPreloaderDone);
+
+    // Fallback trigger in case preloader already dismissed or on direct hash link
+    const timer = setTimeout(() => setIsReady(true), 3200);
+
+    return () => {
+      window.removeEventListener("preloaderComplete", onPreloaderDone);
+      clearTimeout(timer);
+    };
   }, []);
+
+  // Typewriter loop
+  useEffect(() => {
+    if (!isReady) return;
+
+    const fullText = animatedTitles[titleIdx];
+    const speed = isDeleting ? 35 : 75;
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setCurrentText(fullText.substring(0, currentText.length + 1));
+        if (currentText.length === fullText.length) {
+          setTimeout(() => setIsDeleting(true), 2200); // Pause before backspacing
+        }
+      } else {
+        setCurrentText(fullText.substring(0, currentText.length - 1));
+        if (currentText.length === 0) {
+          setIsDeleting(false);
+          setTitleIdx((prev) => (prev + 1) % animatedTitles.length);
+        }
+      }
+    }, speed);
+
+    return () => clearTimeout(timeout);
+  }, [currentText, isDeleting, titleIdx, isReady]);
 
   const [firstName, lastName] = portfolioData.personal.name.split(" ");
 
-  const splitText = (text: string) => {
+  const splitLetters = (text: string, isAccent: boolean, baseDelay: number) => {
     return text.split("").map((char, i) => (
       <motion.span
         key={i}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 1.2 + (i * 0.05) }} // Delay accounts for preloader
-        className="inline-block"
+        initial={{ opacity: 0, y: 65, rotateX: -45 }}
+        animate={isReady ? { opacity: 1, y: 0, rotateX: 0 } : { opacity: 0, y: 65, rotateX: -45 }}
+        transition={{
+          duration: 0.65,
+          ease: [0.215, 0.61, 0.355, 1],
+          delay: baseDelay + i * 0.045,
+        }}
+        whileHover={{
+          y: -10,
+          scale: 1.08,
+          transition: { type: "spring", stiffness: 450, damping: 12 },
+        }}
+        className={`inline-block cursor-default select-none transition-transform ${
+          isAccent ? "text-neon-cyan drop-shadow-[0_0_25px_rgba(34,211,238,0.35)]" : "text-foreground"
+        }`}
       >
         {char}
       </motion.span>
@@ -46,7 +105,7 @@ export default function Hero() {
           loop 
           playsInline 
           className="w-full h-full object-cover opacity-20 pointer-events-none mix-blend-screen"
-          poster="/placeholder-profile.jpg" // Using placeholder as poster fallback
+          poster="/placeholder-profile.jpg"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
       </div>
@@ -57,22 +116,24 @@ export default function Hero() {
 
       <div ref={containerRef} className="max-w-screen-2xl mx-auto w-full relative z-20 flex flex-col items-start justify-center h-full mt-6 sm:mt-10">
         
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 mb-6 sm:mb-8">
+        {/* Dynamic Typewriter Badge & Open to Work */}
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 mb-6 sm:mb-8 min-h-[32px]">
           <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 1.4 }}
-            className="flex items-center gap-4 font-mono text-[10px] md:text-xs text-neon-accent tracking-[0.2em] uppercase"
+            initial={{ opacity: 0, x: -25 }}
+            animate={isReady ? { opacity: 1, x: 0 } : { opacity: 0, x: -25 }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center gap-3 font-mono text-xs sm:text-sm text-neon-accent tracking-[0.2em] uppercase font-bold"
           >
-            <span className="w-8 h-[1px] bg-neon-accent" />
-            {portfolioData.personal.title}
+            <span className="w-6 h-[2px] bg-neon-accent" />
+            <span>{currentText || portfolioData.personal.title}</span>
+            <span className="inline-block w-2 h-3.5 bg-neon-cyan animate-pulse ml-0.5 shadow-[0_0_8px_#22d3ee]" />
           </motion.div>
           
           {portfolioData.personal.openToWork && (
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 1.6 }}
+              animate={isReady ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               className="px-3 py-1 bg-green-500/10 border border-green-500/20 text-green-400 font-mono text-[9px] uppercase tracking-widest rounded-full flex items-center gap-2"
             >
               <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" />
@@ -81,38 +142,40 @@ export default function Hero() {
           )}
         </div>
 
-        {/* Staggered Split-Text Typography */}
-        <div className="flex flex-col items-start z-10 pointer-events-none">
-          <h1 className="font-display font-bold text-[13vw] sm:text-[11vw] md:text-[9vw] leading-[0.88] tracking-[-0.04em] text-foreground uppercase flex overflow-hidden">
-            {splitText(firstName)}
+        {/* Staggered Interactive Kinetic Typography */}
+        <div className="flex flex-col items-start z-10 pointer-events-auto [perspective:1000px]">
+          <h1 className="font-display font-black text-[13vw] sm:text-[11vw] md:text-[9vw] leading-[0.88] tracking-[-0.04em] uppercase flex overflow-hidden">
+            {splitLetters(firstName, false, 0.05)}
           </h1>
-          <h1 className="font-display font-bold text-[13vw] sm:text-[11vw] md:text-[9vw] leading-[0.88] tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-r from-neon-accent to-neon-cyan uppercase ml-0 sm:ml-6 md:ml-12 flex overflow-hidden">
-            {splitText(lastName)}
+          <h1 className="font-display font-black text-[13vw] sm:text-[11vw] md:text-[9vw] leading-[0.88] tracking-[-0.04em] uppercase ml-0 sm:ml-6 md:ml-12 flex overflow-hidden">
+            {splitLetters(lastName, true, 0.25)}
           </h1>
         </div>
         
+        {/* Subtitle */}
         <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 2.0 }}
+          initial={{ opacity: 0, y: 15 }}
+          animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-8 sm:mt-12 max-w-lg"
         >
-          <p className="font-mono text-xs md:text-sm text-foreground/80 leading-relaxed uppercase tracking-widest border-l border-foreground/30 pl-4 sm:pl-6">
+          <p className="font-mono text-xs md:text-sm text-foreground/80 leading-relaxed uppercase tracking-widest border-l-2 border-neon-accent/40 pl-4 sm:pl-6">
             {portfolioData.personal.subtitle}
           </p>
         </motion.div>
         
+        {/* Action Buttons */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 2.2 }}
-          className="flex flex-col sm:flex-row gap-3.5 sm:gap-6 mt-10 sm:mt-16 w-full sm:w-auto pointer-events-auto"
+          animate={isReady ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.7, delay: 0.8 }}
+          className="flex flex-col sm:flex-row gap-3.5 sm:gap-6 mt-10 sm:mt-14 w-full sm:w-auto pointer-events-auto"
         >
-          <a href="#projects" className="relative overflow-hidden group px-6 sm:px-8 py-3.5 sm:py-4 bg-foreground text-background font-mono text-[11px] sm:text-[10px] uppercase tracking-[0.2em] text-center hover:shadow-[0_0_20px_rgba(124,140,255,0.3)] transition-all">
+          <a href="#projects" className="relative overflow-hidden group px-6 sm:px-8 py-3.5 sm:py-4 bg-foreground text-background font-mono text-[11px] sm:text-[10px] uppercase tracking-[0.2em] text-center hover:shadow-[0_0_20px_rgba(56,189,248,0.4)] transition-all rounded-md">
             <span className="relative z-10 font-bold">View Projects</span>
             <div className="absolute inset-0 bg-neon-accent translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
           </a>
-          <a href={portfolioData.personal.links.resume} target="_blank" rel="noopener noreferrer" className="px-6 sm:px-8 py-3.5 sm:py-4 border border-foreground/20 text-foreground font-mono text-[11px] sm:text-[10px] uppercase tracking-[0.2em] text-center hover:bg-foreground/5 hover:border-neon-accent hover:text-neon-accent transition-all duration-300">
+          <a href={portfolioData.personal.links.resume} target="_blank" rel="noopener noreferrer" className="px-6 sm:px-8 py-3.5 sm:py-4 border border-foreground/20 text-foreground font-mono text-[11px] sm:text-[10px] uppercase tracking-[0.2em] text-center hover:bg-foreground/5 hover:border-neon-cyan hover:text-neon-cyan transition-all duration-300 rounded-md">
             Download Resume
           </a>
         </motion.div>
@@ -122,8 +185,8 @@ export default function Hero() {
       {/* Scroll indicator */}
       <motion.div 
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2.5, duration: 1 }}
+        animate={isReady ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ delay: 1, duration: 1 }}
         className="absolute bottom-12 right-12 z-20 flex flex-col items-center gap-4 hidden md:flex"
       >
         <span className="font-mono text-[9px] uppercase tracking-widest text-foreground/40 [writing-mode:vertical-lr]">Scroll Sequence</span>
