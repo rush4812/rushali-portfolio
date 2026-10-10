@@ -177,57 +177,70 @@ export async function submitContact(prevState: any, formData: FormData) {
                 Hi ${validated.name},
               </h2>
               <p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.6; color: #cbd5e1;">
-                Thank you for reaching out through my portfolio website! I have received your message and will review it and get back to you shortly.
+                Thank you for reaching out through my portfolio website! Whether you are a recruiter, engineering manager, or company looking to hire — I am glad to connect with you.
+              </p>
+              <p style="margin: 0 0 20px 0; font-size: 15px; line-height: 1.6; color: #cbd5e1;">
+                I am actively open to <strong style="color: #00f0ff;">Full Stack Developer</strong> roles. I love building high-performance web applications, scalable APIs, and clean user interfaces.
               </p>
 
-              <!-- Copy of their message -->
+              <!-- Reference of their message if any -->
               <div style="margin: 20px 0; padding: 16px 20px; background-color: #0d121f; border-left: 3px solid #00f0ff; border-radius: 4px;">
                 <div style="font-size: 11px; font-family: monospace; color: #94a3b8; text-transform: uppercase; margin-bottom: 6px;">
-                  Your Message to Me:
+                  Your Note / Inquiry:
                 </div>
                 <div style="font-size: 14px; line-height: 1.5; color: #e2e8f0; font-style: italic;">
                   &ldquo;${validated.message}&rdquo;
                 </div>
               </div>
 
-              <!-- Profile & Background Overview -->
+              <!-- Profile & Qualifications Overview -->
               <div style="margin: 24px 0; padding: 20px; background-color: #1a2236; border: 1px solid #2a3550; border-radius: 8px;">
-                <div style="font-size: 11px; font-family: monospace; color: #00f0ff; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; margin-bottom: 10px;">
-                  ⚡ Profile &amp; Background
+                <div style="font-size: 11px; font-family: monospace; color: #00f0ff; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; margin-bottom: 12px;">
+                  🚀 About My Technical Expertise
                 </div>
-                <p style="margin: 0 0 12px 0; font-size: 14px; line-height: 1.6; color: #cbd5e1;">
-                  I am a passionate Full Stack Developer focused on building high-performance web applications, reliable APIs, and seamless interfaces.
-                </p>
-                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size: 13px; color: #94a3b8;">
+                <table width="100%" cellpadding="0" cellspacing="0" border="0" style="font-size: 13px; color: #94a3b8; line-height: 1.6;">
                   <tr>
-                    <td style="padding: 4px 0; width: 110px; font-weight: 600; color: #ffffff;">Role:</td>
-                    <td style="padding: 4px 0; color: #e2e8f0;">Full Stack Developer</td>
+                    <td style="padding: 5px 0; width: 120px; font-weight: 600; color: #ffffff;">Target Role:</td>
+                    <td style="padding: 5px 0; color: #e2e8f0;"><strong style="color: #00f0ff;">Full Stack Developer</strong> (Frontend &amp; Backend)</td>
                   </tr>
                   <tr>
-                    <td style="padding: 4px 0; font-weight: 600; color: #ffffff;">Education:</td>
-                    <td style="padding: 4px 0; color: #e2e8f0;">Master of Computer Application (MCA)</td>
+                    <td style="padding: 5px 0; font-weight: 600; color: #ffffff;">Frontend:</td>
+                    <td style="padding: 5px 0; color: #e2e8f0;">Next.js, React.js, TypeScript, Tailwind CSS, Framer Motion</td>
                   </tr>
                   <tr>
-                    <td style="padding: 4px 0; font-weight: 600; color: #ffffff;">Core Stack:</td>
-                    <td style="padding: 4px 0; color: #00f0ff; font-family: monospace;">Next.js, React, Node.js, TypeScript, PostgreSQL, MongoDB, MySQL</td>
+                    <td style="padding: 5px 0; font-weight: 600; color: #ffffff;">Backend &amp; APIs:</td>
+                    <td style="padding: 5px 0; color: #e2e8f0;">Node.js, Express, RESTful APIs, Server Actions</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 5px 0; font-weight: 600; color: #ffffff;">Databases:</td>
+                    <td style="padding: 5px 0; color: #e2e8f0;">PostgreSQL, MySQL, MongoDB</td>
+                  </tr>
+                  <tr>
+                    <td style="padding: 5px 0; font-weight: 600; color: #ffffff;">Education:</td>
+                    <td style="padding: 5px 0; color: #e2e8f0;">Master of Computer Application (MCA)</td>
                   </tr>
                 </table>
               </div>
 
               <!-- Resume Attached Note -->
-              <div style="margin-bottom: 24px; padding: 14px 18px; background-color: rgba(0, 240, 255, 0.08); border: 1px dashed #00f0ff; border-radius: 8px;">
+              <div style="margin-bottom: 24px; padding: 16px 20px; background-color: rgba(0, 240, 255, 0.08); border: 1px dashed #00f0ff; border-radius: 8px;">
                 <table cellpadding="0" cellspacing="0" border="0" width="100%">
                   <tr>
-                    <td width="30" valign="middle" style="font-size: 20px;">📎</td>
-                    <td style="font-size: 14px; color: #e2e8f0; line-height: 1.4;">
-                      <strong>Resume Attached:</strong> My complete resume (<span style="color: #00f0ff; font-family: monospace;">Rushali_Jivrajani_Resume.pdf</span>) is attached with this email for your reference.
+                    <td width="32" valign="top" style="font-size: 22px; padding-top: 2px;">📎</td>
+                    <td style="font-size: 14px; color: #e2e8f0; line-height: 1.5;">
+                      <strong style="color: #ffffff;">Resume Attached:</strong> If you are looking to hire, please find my updated Resume attached with this email (<span style="color: #00f0ff; font-family: monospace;">Rushali_Jivrajani_Resume.pdf</span>).
                       <br/>
-                      <a href="https://rushali-jivrajani.vercel.app/resume.pdf" style="color: #00f0ff; text-decoration: underline; font-size: 12px; font-family: monospace; display: inline-block; margin-top: 4px;">
-                        Or download online here &rarr;
+                      <a href="https://rushali-jivrajani.vercel.app/resume.pdf" style="color: #00f0ff; text-decoration: underline; font-size: 12px; font-family: monospace; display: inline-block; margin-top: 6px;">
+                        Direct PDF Link &rarr;
                       </a>
                     </td>
                   </tr>
                 </table>
+              </div>
+
+              <!-- Next Steps & Direct Contact -->
+              <div style="margin-bottom: 24px; font-size: 14px; line-height: 1.6; color: #cbd5e1;">
+                I would be delighted to discuss how my skill set and quick-learning ability can contribute to your team or project. You can directly reply to this email, or connect via:
               </div>
 
               <!-- Quick Links Buttons -->
@@ -235,7 +248,7 @@ export async function submitContact(prevState: any, formData: FormData) {
                 <tr>
                   <td align="center">
                     <a href="https://rushali-jivrajani.vercel.app" style="display: inline-block; margin: 4px; padding: 10px 20px; background-color: #00f0ff; color: #000000; font-size: 13px; font-weight: 700; text-decoration: none; border-radius: 6px; font-family: monospace;">
-                      Portfolio &rarr;
+                      Live Portfolio &rarr;
                     </a>
                     <a href="https://linkedin.com/in/rushali-jivrajani" style="display: inline-block; margin: 4px; padding: 10px 20px; background-color: #1e293b; color: #ffffff; border: 1px solid #334155; font-size: 13px; font-weight: 600; text-decoration: none; border-radius: 6px; font-family: monospace;">
                       LinkedIn
@@ -243,14 +256,17 @@ export async function submitContact(prevState: any, formData: FormData) {
                     <a href="https://github.com/rush4812" style="display: inline-block; margin: 4px; padding: 10px 20px; background-color: #1e293b; color: #ffffff; border: 1px solid #334155; font-size: 13px; font-weight: 600; text-decoration: none; border-radius: 6px; font-family: monospace;">
                       GitHub
                     </a>
+                    <a href="tel:+919099538086" style="display: inline-block; margin: 4px; padding: 10px 20px; background-color: #1e293b; color: #ffffff; border: 1px solid #334155; font-size: 13px; font-weight: 600; text-decoration: none; border-radius: 6px; font-family: monospace;">
+                      +91 90995 38086
+                    </a>
                   </td>
                 </tr>
               </table>
 
               <!-- Sign-off -->
               <div style="border-top: 1px solid #1f293d; padding-top: 20px; font-size: 14px; color: #cbd5e1; line-height: 1.5;">
-                Warm regards,<br/>
-                <strong style="color: #ffffff; font-size: 15px;">Rushali Jivrajani</strong><br/>
+                Looking forward to hearing from you,<br/>
+                <strong style="color: #ffffff; font-size: 16px; display: inline-block; margin-top: 4px;">Rushali Jivrajani</strong><br/>
                 <span style="font-size: 13px; color: #94a3b8;">Full Stack Developer</span><br/>
                 <span style="font-size: 12px; font-family: monospace; color: #64748b;">rushjivrajani48@gmail.com &bull; +91 90995 38086</span>
               </div>
@@ -288,9 +304,8 @@ export async function submitContact(prevState: any, formData: FormData) {
       transporter.sendMail({
         from: `"Rushali Jivrajani" <${ownerEmail}>`,
         to: validated.email,
-        replyTo: "rushjivrajani48@gmail.com",
-        subject: `Thank you for reaching out, ${validated.name}! — Rushali Jivrajani`,
-        text: `Hi ${validated.name},\n\nThank you for reaching out through my portfolio website! I have received your message and will get back to you shortly.\n\nBest regards,\nRushali Jivrajani\nFull Stack Developer`,
+        subject: `Rushali Jivrajani — Full Stack Developer (Resume & Portfolio Attached)`,
+        text: `Hi ${validated.name},\n\nThank you for reaching out through my portfolio website! Whether you are a recruiter, engineering manager, or company looking to hire — I am glad to connect.\n\nI have attached my updated resume (Rushali_Jivrajani_Resume.pdf) for your consideration.\n\nBest regards,\nRushali Jivrajani\nFull Stack Developer\n+91 90995 38086`,
         html: clientHtml,
         attachments: resumeAttachments,
       }),

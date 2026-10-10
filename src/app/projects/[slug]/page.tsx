@@ -3,14 +3,51 @@ import { projectsData } from "@/data/projects";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
+import type { Metadata } from "next";
+
 export function generateStaticParams() {
   return projectsData.map((p) => ({
     slug: p.slug,
   }));
 }
 
-export default function CaseStudy({ params }: { params: { slug: string } }) {
-  const project = projectsData.find((p) => p.slug === params.slug);
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: Promise<{ slug: string }> 
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projectsData.find((p) => p.slug === slug);
+  if (!project) return { title: "Project Not Found" };
+
+  return {
+    title: `${project.title} | Case Study`,
+    description: project.summary,
+    openGraph: {
+      title: `${project.title} — Case Study by Rushali Jivrajani`,
+      description: project.summary,
+      url: `https://rushali-jivrajani.vercel.app/projects/${project.slug}`,
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} — Case Study by Rushali Jivrajani`,
+      description: project.summary,
+      images: ["/og-image.png"],
+    },
+  };
+}
+
+export default async function CaseStudy({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const project = projectsData.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();

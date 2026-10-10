@@ -9,32 +9,66 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-space-grotesk" });
 
 export const metadata: Metadata = {
-  title: "Rushali Jivrajani | Full Stack Developer",
-  description: "Portfolio of Rushali Jivrajani, a Full Stack Developer specializing in React.js, Next.js, and the MERN stack. Building scalable and high-performance web applications.",
-  keywords: ["Rushali Jivrajani", "Full Stack Developer", "MERN Stack", "Next.js", "React.js", "Web Developer", "Software Engineer", "India"],
-  authors: [{ name: "Rushali Jivrajani" }],
+  metadataBase: new URL("https://rushali-jivrajani.vercel.app"),
+  title: {
+    default: "Rushali Jivrajani | Full Stack Developer",
+    template: "%s | Rushali Jivrajani",
+  },
+  description: "Portfolio of Rushali Jivrajani — Full Stack Developer specializing in Next.js, React.js, Node.js, and databases (PostgreSQL, MongoDB, MySQL). Building scalable, high-performance web applications.",
+  keywords: [
+    "Rushali Jivrajani",
+    "Full Stack Developer",
+    "Next.js Developer",
+    "React Developer",
+    "Node.js Developer",
+    "MERN Stack",
+    "PostgreSQL",
+    "MongoDB",
+    "MySQL",
+    "Web Developer Portfolio",
+    "Software Engineer",
+    "India"
+  ],
+  authors: [{ name: "Rushali Jivrajani", url: "https://rushali-jivrajani.vercel.app" }],
   creator: "Rushali Jivrajani",
+  publisher: "Rushali Jivrajani",
+  alternates: {
+    canonical: "https://rushali-jivrajani.vercel.app",
+  },
   openGraph: {
     title: "Rushali Jivrajani | Full Stack Developer",
-    description: "Portfolio of Rushali Jivrajani, a Full Stack Developer specializing in React.js, Next.js, and the MERN stack.",
+    description: "Explore the portfolio of Rushali Jivrajani, featuring modern web projects, case studies, and engineering expertise in Next.js, React, Node.js, and databases.",
     url: "https://rushali-jivrajani.vercel.app",
     siteName: "Rushali Jivrajani Portfolio",
+    locale: "en_US",
+    type: "website",
     images: [
       {
-        url: "/og-image.jpg", // TODO: Add an actual OG image to the public folder
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Rushali Jivrajani - Full Stack Developer",
+        type: "image/png",
+      },
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rushali Jivrajani - Full Stack Developer",
+        type: "image/jpeg",
       },
     ],
-    locale: "en_US",
-    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "Rushali Jivrajani | Full Stack Developer",
-    description: "Portfolio of Rushali Jivrajani, a Full Stack Developer specializing in React.js, Next.js, and the MERN stack.",
-    images: ["/og-image.jpg"],
+    description: "Portfolio of Rushali Jivrajani — Full Stack Developer specializing in Next.js, React.js, Node.js, and databases.",
+    images: ["/og-image.png"],
+    creator: "@rush4812",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   robots: {
     index: true,
@@ -54,8 +88,38 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Rushali Jivrajani",
+    jobTitle: "Full Stack Developer",
+    url: "https://rushali-jivrajani.vercel.app",
+    image: "https://rushali-jivrajani.vercel.app/og-image.png",
+    sameAs: [
+      "https://github.com/rush4812",
+      "https://linkedin.com/in/rushali-jivrajani"
+    ],
+    knowsAbout: [
+      "Next.js",
+      "React",
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "MongoDB",
+      "MySQL",
+      "Tailwind CSS",
+      "Full Stack Development"
+    ]
+  };
+
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="antialiased font-sans bg-background text-foreground relative selection:bg-neon-accent selection:text-foreground">
         <Preloader />
         <CustomCursor />
