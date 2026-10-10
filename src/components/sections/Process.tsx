@@ -7,7 +7,7 @@ const processSteps = [
     step: "01",
     phase: "Phase 01",
     title: "Discovery & UI/UX",
-    desc: "Understanding product goals, architecture requirements, and mapping intuitive user journeys before writing code.",
+    desc: "I start by understanding the goals of the project and mapping out how users will interact with it before writing a single line of code.",
     highlights: ["Scope & Requirements", "Architecture Planning", "UI/UX Wireframes"],
     icon: Compass,
     accent: "#38bdf8",
@@ -15,8 +15,8 @@ const processSteps = [
   {
     step: "02",
     phase: "Phase 02",
-    title: "Frontend Architecture",
-    desc: "Crafting pixel-perfect, accessible, and high-performance interfaces with Next.js, TypeScript, and Framer Motion.",
+    title: "Building the Frontend",
+    desc: "I create beautiful, responsive, and smooth user interfaces using tools like Next.js, React, and Framer Motion.",
     highlights: ["Component Systems", "State Management", "Fluid Animations"],
     icon: Code2,
     accent: "#22d3ee",
@@ -24,8 +24,8 @@ const processSteps = [
   {
     step: "03",
     phase: "Phase 03",
-    title: "Backend & Systems",
-    desc: "Architecting reliable REST APIs and robust data layers with Node.js, Express, and MongoDB or PostgreSQL.",
+    title: "Setting up the Backend",
+    desc: "I build secure and reliable APIs and databases to make sure the app can handle data efficiently behind the scenes.",
     highlights: ["Secure API Routing", "Data Modeling", "Auth & Validation"],
     icon: Server,
     accent: "#60a5fa",
@@ -33,8 +33,8 @@ const processSteps = [
   {
     step: "04",
     phase: "Phase 04",
-    title: "Testing & Deployment",
-    desc: "Automating CI/CD pipelines, optimizing lighthouse scores, and deploying zero-downtime production builds.",
+    title: "Testing & Launch",
+    desc: "Finally, I thoroughly test the app, optimize its performance, and launch it smoothly so it's ready for users.",
     highlights: ["Automated CI/CD", "Vercel / Cloud Deploy", "Performance Audits"],
     icon: Rocket,
     accent: "#38bdf8",
@@ -59,7 +59,7 @@ export default function Process() {
             className="font-mono text-neon-accent text-xs tracking-[0.3em] uppercase mb-3 flex items-center justify-center gap-3"
           >
             <span className="w-8 h-[1px] bg-neon-accent" />
-            <span>Workflow & Pipeline</span>
+            <span>How I Work</span>
             <span className="w-8 h-[1px] bg-neon-accent" />
           </motion.div>
           
@@ -70,7 +70,7 @@ export default function Process() {
             transition={{ delay: 0.1 }}
             className="font-display font-black text-3xl sm:text-5xl md:text-6xl text-foreground mb-3 sm:mb-4 tracking-tight"
           >
-            Engineering <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-accent to-neon-cyan">Pipeline.</span>
+            My <span className="text-transparent bg-clip-text bg-gradient-to-r from-neon-accent to-neon-cyan">Process.</span>
           </motion.h2>
 
           <motion.p 
@@ -80,7 +80,7 @@ export default function Process() {
             transition={{ delay: 0.2 }}
             className="font-mono text-xs sm:text-sm text-foreground/60 leading-relaxed px-2"
           >
-            A disciplined 4-stage engineering methodology designed for speed, clarity, and rock-solid code quality.
+            A simple, four-step process that helps me build projects from the ground up.
           </motion.p>
         </div>
 

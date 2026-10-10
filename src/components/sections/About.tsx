@@ -42,10 +42,10 @@ export default function About() {
           <div>
             <div className="inline-flex items-center gap-2.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-neon-accent/10 border border-neon-accent/30 text-neon-accent font-mono text-[11px] sm:text-xs tracking-wider uppercase mb-3 sm:mb-4">
               <span className="w-2 h-2 rounded-full bg-neon-accent animate-ping" />
-              <span>Identity & Engineering Mindset</span>
+              <span>A Bit About Me</span>
             </div>
             <h2 className="font-display font-black text-3xl sm:text-5xl md:text-6xl text-foreground tracking-tight">
-              Driven By Logic. <br />
+              Passionate About Code. <br />
               <span className="bg-gradient-to-r from-neon-accent via-cyan-300 to-indigo-400 bg-clip-text text-transparent">
                 Always Ready To Learn.
               </span>
@@ -53,7 +53,7 @@ export default function About() {
           </div>
 
           <div className="max-w-md font-mono text-xs sm:text-sm text-foreground/60 leading-relaxed">
-            I don’t just write code for the stacks I know today — I pride myself on rapidly absorbing new frameworks, architectures, and technologies whenever an ambitious project calls for it.
+            I love working with the tools I know, but what really excites me is learning something completely new. If a project needs a different framework or tool, I’m always ready to dive in and get it working.
           </div>
         </div>
 
@@ -78,7 +78,7 @@ export default function About() {
               </div>
 
               <h3 className="font-display font-bold text-xl sm:text-2xl md:text-3xl text-foreground mb-4 sm:mb-6 leading-snug">
-                Bridging robust backend engineering with fast, intuitive interfaces.
+                Building solid backends and beautiful, fast user interfaces.
               </h3>
 
               <div className="space-y-3.5 sm:space-y-4 font-mono text-xs sm:text-sm text-foreground/75 leading-relaxed">
@@ -86,10 +86,10 @@ export default function About() {
                   Hello! I’m <span className="text-foreground font-semibold">Rushali Jivrajani</span>. With a Master of Computer Application (MCA) degree and hands-on experience shipping real-world web applications, I build software that solves actual business friction.
                 </p>
                 <p>
-                  My day-to-day work centers around Next.js, React, Node.js, Express, and comprehensive database architectures using <span className="text-neon-cyan">PostgreSQL</span>, <span className="text-neon-cyan">MySQL</span>, and <span className="text-neon-cyan">MongoDB</span>.
+                  My day-to-day work centers around Next.js, React, Node.js, and Express, along with databases like <span className="text-neon-cyan">PostgreSQL</span>, <span className="text-neon-cyan">MySQL</span>, and <span className="text-neon-cyan">MongoDB</span>.
                 </p>
                 <p className="text-foreground/90 font-medium pt-2 border-t border-white/5">
-                  💡 <span className="text-neon-accent">What truly sets me apart:</span> I treat every unfamiliar technology not as a roadblock, but as an opportunity to expand my toolkit. Give me new documentation, and I’ll turn it into functional, production-ready software in days.
+                  💡 <span className="text-neon-accent">What I enjoy most:</span> I never see new technologies as a roadblock. Give me some good documentation, and I’ll have it up and running in no time.
                 </p>
               </div>
             </div>
@@ -309,17 +309,17 @@ export default function About() {
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-400/10 border border-cyan-400/30 text-neon-cyan font-mono text-[11px] sm:text-xs uppercase tracking-wider mb-3 sm:mb-4">
                 <Rocket size={14} className="text-neon-cyan" />
-                <span>Superpower & Growth Stance</span>
+                <span>My Superpower</span>
               </div>
               
               <h3 className="font-display font-black text-2xl sm:text-3xl md:text-5xl text-foreground mb-3 sm:mb-4 leading-tight">
-                Ready To Learn & Master <br className="hidden sm:block" />
-                <span className="text-neon-accent">Any New Technology.</span>
+                Ready To Learn Anything <br className="hidden sm:block" />
+                <span className="text-neon-accent">New.</span>
               </h3>
 
               <p className="font-mono text-xs sm:text-sm text-foreground/75 leading-relaxed max-w-2xl">
-                Frameworks, libraries, and design patterns move at light speed. What defines me as an engineer is not just what I already know — it’s my <strong>velocity in mastering what comes next</strong>. 
-                Whether your team uses cutting-edge cloud stacks, custom internal tooling, or modern AI APIs, I ramp up quickly, ask the right questions, and deliver production-quality code.
+                Technology moves fast, and I love keeping up with it. It’s not just about what I already know, but how fast I can learn what comes next. 
+                Whether your team uses the latest cloud tools, custom internal systems, or AI, I can jump in, ask the right questions, and start contributing quickly.
               </p>
             </div>
 

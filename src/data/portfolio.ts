@@ -4,7 +4,7 @@ export const portfolioData = {
   personal: {
     name: "Rushali Jivrajani",
     title: "Full Stack Developer",
-    subtitle: "Building strong MERN-stack backends and smooth Next.js interfaces.",
+    subtitle: "Building solid backends and smooth, interactive user interfaces.",
     openToWork: true,
     email: "rushjivrajani48@gmail.com",
     phone: "+91 90995 38086",
@@ -15,9 +15,9 @@ export const portfolioData = {
     }
   },
   about: {
-    text: "Hi, I'm Rushali Jivrajani — a Full Stack Developer with an MCA degree and a strong foundation across Next.js, React, Node.js, and modern databases (PostgreSQL, MySQL, MongoDB). Beyond my core stack, my biggest strength is technical agility: I am perpetually curious, exceptionally quick to grasp new concepts, and always excited to learn, adapt, and build with whatever new technologies an ambitious project demands.",
-    mindset: "Relentlessly curious, rapid adopter, and dedicated to engineering scalable solutions.",
-    currentlyLearning: "AI Integration, Cloud-Native Architecture & Modern WebGL",
+    text: "Hi, I'm Rushali Jivrajani — a Full Stack Developer. I love building things with Next.js, React, Node.js, and databases like PostgreSQL, MySQL, and MongoDB. What really drives me is my curiosity and ability to learn quickly. I enjoy picking up new tools and figuring out how to build the best solution for the project at hand.",
+    mindset: "Always curious, quick to learn, and focused on building apps that people actually love to use.",
+    currentlyLearning: "AI APIs, Cloud tools, and playing around with 3D WebGL",
     photoUrl: "/placeholder-profile.jpg"
   },
   projects: [
@@ -25,7 +25,7 @@ export const portfolioData = {
       id: "amanta",
       slug: "amanta-healthcare",
       title: "Amanta Healthcare",
-      summary: "A fast and secure web platform built for healthcare professionals with automated data processing.",
+      summary: "A fast and secure web platform for healthcare professionals with automated data processing.",
       role: "Lead Full Stack Developer",
       tech: ["Next.js", "MongoDB", "Express", "TailwindCSS"],
       liveDemo: "#", // TODO: Add real Live Demo URL
@@ -43,7 +43,7 @@ export const portfolioData = {
       id: "calico",
       slug: "calico-museum",
       title: "Calico Museum Archives",
-      summary: "A clean, interactive frontend for a digital museum archive to explore thousands of historical records.",
+      summary: "A clean, interactive website for a digital museum archive to explore thousands of historical records.",
       role: "Frontend Engineer",
       tech: ["React.js", "Redux", "Node.js", "PostgreSQL"],
       liveDemo: "#", // TODO: Add real Live Demo URL
@@ -61,7 +61,7 @@ export const portfolioData = {
       id: "madhubhan",
       slug: "madhubhan-resort",
       title: "Madhubhan Resort",
-      summary: "A premium hotel booking platform with fast page loads and smooth luxury animations.",
+      summary: "A premium hotel booking platform with fast page loads and smooth, luxurious animations.",
       role: "Full Stack Developer",
       tech: ["Next.js", "TypeScript", "MySQL", "Framer Motion"],
       liveDemo: "#", // TODO: Add real Live Demo URL
@@ -136,10 +136,10 @@ export const portfolioData = {
       company: "NetInc Digital Services",
       period: "Jul 2024 - Present",
       achievements: [
-        "Developed responsive frontend designs and scalable backend APIs using the MERN stack and Next.js.",
-        "Built robust RESTful APIs with Node.js and Express to handle heavy data requests efficiently.",
-        "Designed complex MongoDB database schemas and improved query speed by 45% using proper indexing. // TODO: confirm metric",
-        "Set up CI/CD pipelines using GitHub Actions for smooth and automated deployments without downtime."
+        "Built full-stack applications from the ground up using the MERN stack and Next.js.",
+        "Created reliable APIs with Node.js and Express to handle data smoothly and securely.",
+        "Designed flexible MongoDB databases and sped up how fast data loads for the users.",
+        "Set up automated systems so that code updates are published live without any downtime."
       ]
     },
     {
@@ -147,10 +147,10 @@ export const portfolioData = {
       company: "Sharva InfoTech",
       period: "Feb 2024 - Jun 2024",
       achievements: [
-        "Built fast and interactive admin dashboards for enterprise clients using React.js.",
-        "Managed application state effectively and integrated the UI with secure Node.js backend services.",
-        "Followed strict testing practices to make sure the application runs smoothly without any crashes. // TODO: confirm metric",
-        "Worked closely with the team in an agile environment to deliver features on time."
+        "Built fast and interactive dashboards for business clients using React.js.",
+        "Connected the frontend interfaces to secure Node.js backend systems.",
+        "Made sure everything was well-tested so the app runs smoothly without crashing.",
+        "Worked closely with the rest of the team to get features done on time."
       ]
     }
   ],

@@ -24,10 +24,10 @@ export const projectsData: Project[] = [
     type: "Enterprise Portal", // TODO: confirm
     year: "2023", // TODO: confirm
     role: "Full Stack Developer", // TODO: confirm
-    summary: "A fast and secure web platform built for healthcare professionals with automated data processing.",
-    problem: "Needed a scalable solution to handle heavy data requests and secure user management.", // TODO: confirm
-    built: "Developed robust RESTful APIs with Node.js and a responsive Next.js frontend.", // TODO: confirm
-    result: "Improved query speed by 45% and established a smooth CI/CD pipeline without downtime.", // TODO: confirm
+    summary: "A fast and secure web platform for healthcare professionals to automatically process their data.",
+    problem: "They needed a system that could easily handle large amounts of data while keeping user accounts secure.", // TODO: confirm
+    built: "I created reliable APIs using Node.js and a clean, responsive frontend with Next.js.", // TODO: confirm
+    result: "The new system sped up data loading by 45% and allowed for seamless, automatic updates without taking the site offline.", // TODO: confirm
     tech: ["Next.js", "React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
     accent: "#38bdf8", // neon-cyan
     media: { type: "image", src: "" }, // TODO: add screenshot

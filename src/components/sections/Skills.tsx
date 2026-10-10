@@ -6,32 +6,32 @@ import { Database, Server, Layers, GitBranch, Zap, LayoutTemplate } from "lucide
 const strengths = [
   {
     title: "Full Stack Development",
-    desc: "End-to-end web applications using Next.js and the MERN stack.",
+    desc: "Building complete web applications from start to finish using Next.js and the MERN stack.",
     icon: Database
   },
   {
     title: "REST APIs & Microservices",
-    desc: "Scalable backend systems and high-throughput data pipelines.",
+    desc: "Creating reliable backends and smooth data connections.",
     icon: Server
   },
   {
     title: "Auth & State Management",
-    desc: "Secure JWT workflows and complex frontend state architecture.",
+    desc: "Handling user logins securely and keeping the frontend organized.",
     icon: Layers
   },
   {
     title: "CI/CD & Deployment",
-    desc: "Automated GitHub Actions workflows and Vercel/Node deployments.",
+    desc: "Setting up automatic systems so code gets published easily and safely.",
     icon: GitBranch
   },
   {
     title: "Performance Optimization",
-    desc: "Server-side rendering, caching, and 95+ Lighthouse scores.",
+    desc: "Making sure apps load fast and run smoothly for everyone.",
     icon: Zap
   },
   {
     title: "Scalable Architecture",
-    desc: "Designing secure, maintainable databases and clear API layers.",
+    desc: "Designing databases and APIs that are easy to manage as they grow.",
     icon: LayoutTemplate
   }
 ];
@@ -47,7 +47,7 @@ export default function Skills() {
           className="font-mono text-neon-accent text-xs tracking-[0.3em] uppercase mb-8 sm:mb-14 flex items-center gap-3 sm:gap-4"
         >
           <span className="w-8 h-[1px] bg-neon-accent" />
-          Core Competencies
+          My Skills
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">

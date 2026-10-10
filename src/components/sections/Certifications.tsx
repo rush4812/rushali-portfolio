@@ -14,7 +14,7 @@ export default function Certifications() {
           className="font-mono text-neon-accent text-xs tracking-[0.3em] uppercase mb-8 sm:mb-14 flex items-center gap-3 sm:gap-4"
         >
           <span className="w-8 h-[1px] bg-neon-accent" />
-          04 / Certifications
+          05 / Certifications
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8">

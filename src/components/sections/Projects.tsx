@@ -102,7 +102,7 @@ export default function Projects() {
       <div className="absolute top-16 sm:top-20 md:top-24 left-4 sm:left-6 md:left-12 lg:left-24 z-20 flex items-center gap-4 sm:gap-6">
         <h2 className="font-mono text-neon-accent text-[11px] sm:text-xs md:text-sm tracking-[0.25em] sm:tracking-[0.3em] uppercase flex items-center gap-2.5 sm:gap-3">
           <span className="w-6 sm:w-8 md:w-12 h-[1px] bg-neon-accent" />
-          Selected Works
+          My Work
         </h2>
         <div className="font-mono text-base sm:text-lg md:text-2xl font-light text-foreground flex items-center gap-1.5 sm:gap-2 relative overflow-hidden h-7 sm:h-8" aria-live="polite">
           <AnimatePresence mode="popLayout">

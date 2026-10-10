@@ -32,14 +32,14 @@ export default function Stack() {
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
           <div className="font-mono text-neon-accent text-xs tracking-[0.3em] uppercase mb-3 flex items-center justify-center gap-3">
             <span className="w-8 h-[1px] bg-neon-accent" />
-            <span>Tech Ecosystem</span>
+            <span>My Tech Stack</span>
             <span className="w-8 h-[1px] bg-neon-accent" />
           </div>
           <h2 className="font-display font-black text-3xl sm:text-5xl md:text-6xl text-foreground mb-3 sm:mb-4">
             Core <span className="text-neon-accent">Technologies.</span>
           </h2>
           <p className="font-mono text-xs sm:text-sm text-foreground/60 leading-relaxed px-2">
-            A comprehensive view of the tools, languages, and frameworks I use to build scalable, high-performance web applications.
+            A look at the tools, languages, and frameworks I use to build great web applications.
           </p>
         </div>
 

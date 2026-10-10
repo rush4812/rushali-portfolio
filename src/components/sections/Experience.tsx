@@ -18,7 +18,7 @@ export default function Experience() {
             className="font-mono text-neon-accent text-xs tracking-[0.3em] uppercase mb-8 sm:mb-14 flex items-center gap-3 sm:gap-4"
           >
             <span className="w-8 h-[1px] bg-neon-accent" />
-            03 / Experience
+            03 / Work Experience
           </motion.h2>
 
           <div className="relative border-l border-foreground/10 pl-6 sm:pl-8 space-y-10 sm:space-y-16">
@@ -61,7 +61,7 @@ export default function Experience() {
             className="font-mono text-neon-accent text-xs tracking-[0.3em] uppercase mb-8 sm:mb-14 flex items-center gap-3 sm:gap-4"
           >
             <span className="w-8 h-[1px] bg-neon-accent" />
-            04 / Foundation
+            04 / Education
           </motion.h2>
 
           <div className="relative border-l border-foreground/10 pl-6 sm:pl-8 space-y-10 sm:space-y-16">
