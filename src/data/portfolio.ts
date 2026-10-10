@@ -1,4 +1,4 @@
-import { SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiVercel, SiGit, SiFigma, SiJavascript, SiTypescript, SiRedux, SiMysql } from "react-icons/si";
+import { SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiVercel, SiGit, SiJavascript, SiTypescript, SiRedux, SiMysql, SiVuedotjs, SiHtml5, SiLaravel, SiCodeigniter, SiGithub, SiPhp } from "react-icons/si";
 
 export const portfolioData = {
   personal: {
@@ -172,16 +172,19 @@ export const portfolioData = {
       tools: [
         { name: "React", icon: SiReact, color: "#61DAFB", category: "frontend" },
         { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF", category: "frontend" },
+        { name: "Vue.js", icon: SiVuedotjs, color: "#4FC08D", category: "frontend" },
+        { name: "HTML5 / CSS3", icon: SiHtml5, color: "#E34F26", category: "frontend" },
         { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4", category: "frontend" },
-        { name: "Figma (UI/UX)", icon: SiFigma, color: "#F24E1E", category: "frontend" },
-        { name: "Redux", icon: SiRedux, color: "#764ABC", category: "frontend" }
+        { name: "Redux Toolkit", icon: SiRedux, color: "#764ABC", category: "frontend" }
       ]
     },
     {
       title: "BACKEND",
       tools: [
         { name: "Node.js", icon: SiNodedotjs, color: "#339933", category: "backend" },
-        { name: "Express", icon: SiExpress, color: "#FFFFFF", category: "backend" }
+        { name: "Express", icon: SiExpress, color: "#FFFFFF", category: "backend" },
+        { name: "Laravel", icon: SiLaravel, color: "#FF2D20", category: "backend" },
+        { name: "CodeIgniter", icon: SiCodeigniter, color: "#EE4623", category: "backend" }
       ]
     },
     {
@@ -195,6 +198,7 @@ export const portfolioData = {
     {
       title: "DEVOPS",
       tools: [
+        { name: "GitHub", icon: SiGithub, color: "#F0F6FC", category: "devops" },
         { name: "Vercel", icon: SiVercel, color: "#FFFFFF", category: "devops" },
         { name: "Git", icon: SiGit, color: "#F05032", category: "devops" }
       ]
@@ -203,7 +207,8 @@ export const portfolioData = {
       title: "LANGUAGES",
       tools: [
         { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E", category: "language" },
-        { name: "TypeScript", icon: SiTypescript, color: "#3178C6", category: "language" }
+        { name: "TypeScript", icon: SiTypescript, color: "#3178C6", category: "language" },
+        { name: "PHP", icon: SiPhp, color: "#777BB4", category: "language" }
       ]
     }
   ],

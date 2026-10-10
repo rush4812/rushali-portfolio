@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Skill } from "@/data/skills";
 import * as SiIcons from "react-icons/si";
 import * as FaIcons from "react-icons/fa";
+import * as TbIcons from "react-icons/tb";
 import Link from "next/link";
 
 interface SkillCardProps {
@@ -17,7 +18,7 @@ export function SkillCard({ skill, onHover, isDimmed, index }: SkillCardProps) {
   const [isFocused, setIsFocused] = useState(false);
   
   // Dynamic icon
-  const Icon = (SiIcons as any)[skill.icon] || (FaIcons as any)[skill.icon] || SiIcons.SiReact;
+  const Icon = (SiIcons as any)[skill.icon] || (FaIcons as any)[skill.icon] || (TbIcons as any)[skill.icon] || SiIcons.SiReact;
 
   const handleInteract = (active: boolean) => {
     setIsFocused(active);
@@ -111,6 +112,7 @@ export function SkillCard({ skill, onHover, isDimmed, index }: SkillCardProps) {
                   const isActive = 
                     (skill.level === "daily" && step <= 3) || 
                     (skill.level === "comfortable" && step <= 2) || 
+                    (skill.level === "weekly" && step <= 2) || 
                     (skill.level === "learning" && step <= 1);
                   return (
                     <div 
