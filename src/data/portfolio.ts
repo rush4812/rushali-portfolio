@@ -1,10 +1,10 @@
-import { SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiVercel, SiGit, SiJavascript, SiTypescript, SiRedux, SiMysql, SiVuedotjs, SiHtml5, SiLaravel, SiCodeigniter, SiGithub, SiPhp } from "react-icons/si";
+import { SiReact, SiNextdotjs, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiVercel, SiGit, SiJavascript, SiTypescript, SiRedux, SiMysql, SiVuedotjs, SiHtml5, SiLaravel, SiCodeigniter, SiGithub, SiPhp, SiBootstrap, SiProcesswire } from "react-icons/si";
 
 export const portfolioData = {
   personal: {
     name: "Rushali Jivrajani",
     title: "Full Stack Developer",
-    subtitle: "Building solid backends and smooth, interactive user interfaces.",
+    subtitle: "I build fast, responsive web applications - from polished React and Next.js interfaces to the REST APIs behind them.",
     openToWork: true,
     email: "rushjivrajani48@gmail.com",
     phone: "+91 90995 38086",
@@ -15,9 +15,9 @@ export const portfolioData = {
     }
   },
   about: {
-    text: "Hi, I'm Rushali Jivrajani — a Full Stack Developer. I love building things with Next.js, React, Node.js, and databases like PostgreSQL, MySQL, and MongoDB. What really drives me is my curiosity and ability to learn quickly. I enjoy picking up new tools and figuring out how to build the best solution for the project at hand.",
-    mindset: "Always curious, quick to learn, and focused on building apps that people actually love to use.",
-    currentlyLearning: "AI APIs, Cloud tools, and playing around with 3D WebGL",
+    text: "Hi, I'm Rushali Jivrajani - a Full Stack Developer with 2+ years of experience and an MCA degree. At NetInc Digital Services LLP, I've worked on 6+ live client websites, taking features from UI to API integration and keeping them stable in production. My day-to-day stack is React.js, Vue.js and Next.js on the frontend, with Node.js, Express and REST APIs behind it, backed by MongoDB, MySQL or PostgreSQL. I care about clean, reusable code, responsive layouts and cross-browser consistency.",
+    mindset: "Polished, responsive interfaces backed by reliable REST APIs.",
+    currentlyLearning: "picking up new tools fast. Give me solid documentation and I'll have it running in no time.",
     photoUrl: "/placeholder-profile.jpg"
   },
   projects: [
@@ -25,35 +25,35 @@ export const portfolioData = {
       id: "amanta",
       slug: "amanta-healthcare",
       title: "Amanta Healthcare",
-      summary: "A fast and secure web platform for healthcare professionals with automated data processing.",
-      role: "Lead Full Stack Developer",
+      summary: "Developed and launched Amanta Healthcare's new website with a clean, responsive UI that works across devices.",
+      role: "Developed & launched",
       tech: [],
-      liveDemo: "#", // TODO: Add real Live Demo URL
-      github: "#", // TODO: Add real GitHub URL
-      coverImage: "/projects/amanta-cover.jpg", // TODO: Add real image
+      liveDemo: "https://amanta.co.in",
+      github: "#",
+      coverImage: "/projects/amanta.png",
       caseStudy: {
-        problem: "The client needed a highly secure and fast-loading platform for doctors and patients, where they could view data without any lag.",
-        approach: "I built a responsive web app using server-side rendering so the pages load instantly. I also designed a clean API layer to handle the data securely.",
-        techDecisions: "I chose Next.js because it helps with SEO and fast initial loading. For the database, MongoDB was perfect for storing flexible medical records.",
-        result: "Delivered a smooth application with almost zero delay in loading data, and fully automated deployment pipelines.",
-        gallery: [] // TODO: Add gallery image paths
+        problem: "",
+        approach: "Developed and launched Amanta Healthcare's new website with a clean, responsive UI that works across devices.",
+        techDecisions: "",
+        result: "",
+        gallery: []
       }
     },
     {
       id: "calico",
       slug: "calico-museum",
       title: "Calico Museum Archives",
-      summary: "A clean, interactive website for a digital museum archive to explore thousands of historical records.",
-      role: "Frontend Engineer",
+      summary: "Contributed to the frontend development of the museum's new website.",
+      role: "Frontend Developer",
       tech: [],
-      liveDemo: "#", // TODO: Add real Live Demo URL
-      github: "#", // TODO: Add real GitHub URL
-      coverImage: "/projects/calico-cover.jpg", // TODO: Add real image
+      liveDemo: "https://calicomuseum.org",
+      github: "#",
+      coverImage: "/projects/calico.png",
       caseStudy: {
-        problem: "Users were finding it very difficult to search and navigate through a massive, unorganized historical dataset.",
-        approach: "I created a simple and component-based user interface that makes filtering and finding historical items very easy.",
-        techDecisions: "I used Redux to manage the complex state of all the different search filters across the application.",
-        result: "Transformed the confusing archive into a user-friendly digital experience with very fast search results.",
+        problem: "",
+        approach: "Contributed to the frontend development of the museum's new website.",
+        techDecisions: "",
+        result: "",
         gallery: []
       }
     },
@@ -61,17 +61,17 @@ export const portfolioData = {
       id: "madhubhan",
       slug: "madhubhan-resort",
       title: "Madhubhan Resort",
-      summary: "A premium hotel booking platform with fast page loads and smooth, luxurious animations.",
-      role: "Full Stack Developer",
+      summary: "Led the complete build and launch of the resort's new website from scratch, delivering a responsive experience across devices.",
+      role: "Led build & launch",
       tech: [],
-      liveDemo: "#", // TODO: Add real Live Demo URL
-      github: "#", // TODO: Add real GitHub URL
-      coverImage: "/projects/madhubhan-cover.jpg", // TODO: Add real image
+      liveDemo: "https://madhubhanresortandspa.com/",
+      github: "#",
+      coverImage: "/projects/madhubhan.png",
       caseStudy: {
-        problem: "The resort wanted their website to feel as premium and luxurious as their physical property, but without becoming slow to load.",
-        approach: "I developed the entire website focusing on smooth, cinematic scroll animations while keeping a strict check on performance and image sizes.",
-        techDecisions: "I designed the interfaces in Figma for an intuitive user experience, and used MySQL for reliable booking data persistence.",
-        result: "Achieved a 98+ Lighthouse performance score even with heavy, high-quality images and videos.",
+        problem: "",
+        approach: "Led the complete build and launch of the resort's new website from scratch, delivering a responsive experience across devices.",
+        techDecisions: "",
+        result: "",
         gallery: []
       }
     },
@@ -79,17 +79,17 @@ export const portfolioData = {
       id: "cupdf",
       slug: "cupdf",
       title: "CUPDF",
-      summary: "A robust UI implementation using Vue.js for seamless document handling.",
-      role: "Frontend Developer",
+      summary: "Built the user interface for the CUPDF website using Vue.js.",
+      role: "Frontend Developer (Vue.js)",
       tech: [],
-      liveDemo: "#",
+      liveDemo: "https://cupdf.org/",
       github: "#",
-      coverImage: "/placeholder.jpg",
+      coverImage: "/projects/cupdf.png",
       caseStudy: {
-        problem: "The client needed a responsive, modern interface to view and manage PDF documents.",
-        approach: "Implemented a dynamic Vue.js frontend with highly reusable components.",
-        techDecisions: "Vue.js was selected for its reactivity and ease of integrating complex UI features.",
-        result: "Delivered a highly performant interface allowing users to flawlessly read documents.",
+        problem: "",
+        approach: "Built the user interface for the CUPDF website using Vue.js.",
+        techDecisions: "",
+        result: "",
         gallery: []
       }
     },
@@ -97,17 +97,35 @@ export const portfolioData = {
       id: "mdi-gurgaon",
       slug: "mdi-gurgaon",
       title: "MDI Gurgaon",
-      summary: "Comprehensive website maintenance and layout optimization.",
-      role: "Software Developer",
+      summary: "Handled website maintenance and layout fixes to keep pages clean and consistent.",
+      role: "Website Maintenance",
       tech: [],
-      liveDemo: "#",
+      liveDemo: "https://mdi.ac.in",
       github: "#",
-      coverImage: "/placeholder.jpg",
+      coverImage: "/projects/mdi.png",
       caseStudy: {
-        problem: "The website had layout inconsistencies across modern devices and required structural fixes.",
-        approach: "Conducted a complete layout audit and pushed responsive fixes across all major viewports.",
-        techDecisions: "Used raw CSS and React optimizations to ensure existing architecture wasn't broken.",
-        result: "Restored a perfect cross-browser experience and improved mobile usability metrics.",
+        problem: "",
+        approach: "Handled website maintenance and layout fixes to keep pages clean and consistent.",
+        techDecisions: "",
+        result: "",
+        gallery: []
+      }
+    },
+    {
+      id: "akwakare",
+      slug: "akwakare",
+      title: "Akwakare",
+      summary: "A project currently under development.",
+      role: "Full Stack Developer",
+      tech: [],
+      liveDemo: "",
+      github: "#",
+      coverImage: "/projects/akwakare.png",
+      caseStudy: {
+        problem: "",
+        approach: "A project currently under development.",
+        techDecisions: "",
+        result: "",
         gallery: []
       }
     },
@@ -115,55 +133,58 @@ export const portfolioData = {
       id: "elecon",
       slug: "elecon",
       title: "Elecon",
-      summary: "Website maintenance and layout fixes for an industrial enterprise.",
-      role: "Software Developer",
+      summary: "Handled website maintenance and layout fixes to keep pages clean and consistent.",
+      role: "Website Maintenance",
       tech: [],
-      liveDemo: "#",
+      liveDemo: "{{ELECON_URL}}",
       github: "#",
-      coverImage: "/placeholder.jpg",
+      coverImage: "/projects/elecon.png",
       caseStudy: {
-        problem: "The enterprise needed ongoing maintenance and immediate layout fixes for their digital portal.",
-        approach: "Systematically resolved layout bugs and optimized component loading.",
-        techDecisions: "Refactored legacy React components for better state management.",
-        result: "Increased overall site stability and delivered layout fixes ahead of schedule.",
+        problem: "",
+        approach: "Handled website maintenance and layout fixes to keep pages clean and consistent.",
+        techDecisions: "",
+        result: "",
         gallery: []
       }
     }
   ],
   experience: [
     {
-      role: "Full Stack Developer",
-      company: "NetInc Digital Services",
-      period: "Jul 2024 - Present",
+      role: "Associate Software Developer",
+      company: "NetInc Digital Services LLP, Ahmedabad",
+      period: "Feb 2025 - Present",
       achievements: [
-        "Built full-stack applications from the ground up using the MERN stack and Next.js.",
-        "Created reliable APIs with Node.js and Express to handle data smoothly and securely.",
-        "Designed flexible MongoDB databases and sped up how fast data loads for the users.",
-        "Set up automated systems so that code updates are published live without any downtime."
+        "Developed and maintained multiple production-level client web applications, keeping them fast, stable and responsive",
+        "Built reusable, component-based UIs in React.js and Vue.js for clean, maintainable code",
+        "Integrated frontends with backend services through REST APIs for smooth, reliable data flow",
+        "Diagnosed and resolved critical bugs, improving application stability and performance",
+        "Partnered with backend developers to deliver end-to-end features",
+        "Delivered responsive, cross-browser compatible interfaces across devices",
+        "Managed multiple client projects in parallel and delivered within deadlines"
       ]
     },
     {
-      role: "Full Stack Developer",
-      company: "Sharva InfoTech",
-      period: "Feb 2024 - Jun 2024",
+      role: "React.JS Developer",
+      company: "Sharva InfoTech, Rajkot",
+      period: "Jul 2022 - Jul 2023",
       achievements: [
-        "Built fast and interactive dashboards for business clients using React.js.",
-        "Connected the frontend interfaces to secure Node.js backend systems.",
-        "Made sure everything was well-tested so the app runs smoothly without crashing.",
-        "Worked closely with the rest of the team to get features done on time."
+        "Built reusable UI components in React.js",
+        "Worked on CRUD operations and API integration",
+        "Contributed to frontend features in live, real-world projects",
+        "Gained hands-on experience in team-based development and project workflows"
       ]
     }
   ],
   education: [
     {
-      degree: "Master of Computer Application",
-      school: "Gujarat Technological University",
-      period: "2022 - 2024"
+      degree: "Master of Computer Applications",
+      school: "LJ Institute of Computer Application",
+      period: "2023 - 2025"
     },
     {
-      degree: "Bachelor of Computer Application",
-      school: "Saurashtra University",
-      period: "2019 - 2022"
+      degree: "Bachelor of Computer Applications",
+      school: "Saurashtra University, Rajkot",
+      period: "2020 - 2023"
     }
   ],
   stack: [
@@ -174,6 +195,7 @@ export const portfolioData = {
         { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF", category: "frontend" },
         { name: "Vue.js", icon: SiVuedotjs, color: "#4FC08D", category: "frontend" },
         { name: "HTML5 / CSS3", icon: SiHtml5, color: "#E34F26", category: "frontend" },
+        { name: "Bootstrap", icon: SiBootstrap, color: "#7952B3", category: "frontend" },
         { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4", category: "frontend" },
         { name: "Redux Toolkit", icon: SiRedux, color: "#764ABC", category: "frontend" }
       ]
@@ -183,7 +205,8 @@ export const portfolioData = {
       tools: [
         { name: "Node.js", icon: SiNodedotjs, color: "#339933", category: "backend" },
         { name: "Express", icon: SiExpress, color: "#FFFFFF", category: "backend" },
-        { name: "Laravel", icon: SiLaravel, color: "#FF2D20", category: "backend" },
+        { name: "ProcessWire CMS", icon: SiProcesswire, color: "#EF1940", category: "backend" },
+        { name: "Laravel (Basic)", icon: SiLaravel, color: "#FF2D20", category: "backend" },
         { name: "CodeIgniter", icon: SiCodeigniter, color: "#EE4623", category: "backend" }
       ]
     },

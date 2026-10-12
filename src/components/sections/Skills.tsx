@@ -5,33 +5,33 @@ import { Database, Server, Layers, GitBranch, Zap, LayoutTemplate } from "lucide
 
 const strengths = [
   {
-    title: "Full Stack Development",
-    desc: "Building complete web applications from start to finish using Next.js and the MERN stack.",
+    title: "Full Stack Development (MERN)",
+    desc: "Building complete web applications across the stack with React, Next.js, Node.js, Express and MongoDB.",
     icon: Database
   },
   {
-    title: "REST APIs & Microservices",
-    desc: "Creating reliable backends and smooth data connections.",
+    title: "REST API Development & Integration",
+    desc: "Building and connecting REST APIs so the frontend always gets reliable, well-structured data.",
     icon: Server
   },
   {
-    title: "Auth & State Management",
-    desc: "Handling user logins securely and keeping the frontend organized.",
+    title: "JWT Auth & State Management (Redux)",
+    desc: "Secure JWT-based logins and Redux Toolkit for predictable frontend state.",
     icon: Layers
   },
   {
-    title: "CI/CD & Deployment",
-    desc: "Setting up automatic systems so code gets published easily and safely.",
+    title: "CI/CD, Git & Deployment (Vercel)",
+    desc: "Git workflows and GitHub Actions pipelines, with deployments on Vercel.",
     icon: GitBranch
   },
   {
-    title: "Performance Optimization",
-    desc: "Making sure apps load fast and run smoothly for everyone.",
+    title: "Performance Optimization & Bug Fixing",
+    desc: "Tracking down bugs and tuning pages so applications stay fast and stable.",
     icon: Zap
   },
   {
-    title: "Scalable Architecture",
-    desc: "Designing databases and APIs that are easy to manage as they grow.",
+    title: "Agile Teamwork & Client Delivery",
+    desc: "Working closely with developers and clients to deliver multiple projects on time.",
     icon: LayoutTemplate
   }
 ];

@@ -74,22 +74,22 @@ export default function About() {
             <div>
               <div className="flex items-center gap-2.5 text-foreground/50 font-mono text-[11px] sm:text-xs uppercase tracking-widest mb-4 sm:mb-6">
                 <GraduationCap className="text-neon-accent" size={16} />
-                <span>MCA Graduate • Full Stack Software Engineer</span>
+                <span>MCA Graduate - Full Stack Developer</span>
               </div>
 
               <h3 className="font-display font-bold text-xl sm:text-2xl md:text-3xl text-foreground mb-4 sm:mb-6 leading-snug">
-                Building solid backends and beautiful, fast user interfaces.
+                Polished, responsive interfaces backed by reliable REST APIs.
               </h3>
 
               <div className="space-y-3.5 sm:space-y-4 font-mono text-xs sm:text-sm text-foreground/75 leading-relaxed">
                 <p>
-                  Hello! I’m <span className="text-foreground font-semibold">Rushali Jivrajani</span>. With a Master of Computer Application (MCA) degree and hands-on experience shipping real-world web applications, I build software that solves actual business friction.
+                  Hi, I&apos;m Rushali Jivrajani - a Full Stack Developer with 2+ years of experience and an MCA degree. At NetInc Digital Services LLP, I&apos;ve worked on 6+ live client websites, taking features from UI to API integration and keeping them stable in production.
                 </p>
                 <p>
-                  My day-to-day work centers around Next.js, React, Node.js, and Express, along with databases like <span className="text-neon-cyan">PostgreSQL</span>, <span className="text-neon-cyan">MySQL</span>, and <span className="text-neon-cyan">MongoDB</span>.
+                  My day-to-day stack is React.js, Vue.js and Next.js on the frontend, with Node.js, Express and REST APIs behind it, backed by MongoDB, MySQL or PostgreSQL. I care about clean, reusable code, responsive layouts and cross-browser consistency.
                 </p>
                 <p className="text-foreground/90 font-medium pt-2 border-t border-white/5">
-                  💡 <span className="text-neon-accent">What I enjoy most:</span> I never see new technologies as a roadblock. Give me some good documentation, and I’ll have it up and running in no time.
+                  💡 <span className="text-neon-accent">What I enjoy most:</span> picking up new tools fast. Give me solid documentation and I&apos;ll have it running in no time.
                 </p>
               </div>
             </div>
@@ -97,10 +97,10 @@ export default function About() {
             {/* Quick Badges Ribbon */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 pt-6 sm:pt-8 mt-6 sm:mt-8 border-t border-white/10">
               {[
-                { value: "MCA", label: "Master of Computer Apps" },
-                { value: "6+", label: "Shipped Projects" },
+                { value: "MCA", label: "Master of Computer Applications" },
+                { value: "6+", label: "6+ Live Client Websites" },
                 { value: "3 DBs", label: "PgSQL • MySQL • Mongo" },
-                { value: "100%", label: "Learning Agility" },
+                { value: "2+", label: "2+ Years Experience" },
               ].map((stat, idx) => (
                 <div key={idx} className="p-2.5 sm:p-3 rounded-xl bg-white/[0.02] border border-white/5">
                   <div className="font-display font-extrabold text-lg sm:text-xl text-foreground">{stat.value}</div>
@@ -143,8 +143,8 @@ export default function About() {
                 }`}
               >
                 <Zap size={13} />
-                <span className="hidden sm:inline">TechAgility.ts</span>
-                <span className="sm:hidden">Agility</span>
+                <span className="hidden sm:inline">Config.ts</span>
+                <span className="sm:hidden">Config</span>
               </button>
               <button 
                 onClick={() => setActiveTab("profile")}
@@ -167,8 +167,8 @@ export default function About() {
                 }`}
               >
                 <Cpu size={13} />
-                <span className="hidden sm:inline">WorkEthic.ts</span>
-                <span className="sm:hidden">Ethic</span>
+                <span className="hidden sm:inline">Stack.ts</span>
+                <span className="sm:hidden">Stack</span>
               </button>
             </div>
 
@@ -184,40 +184,33 @@ export default function About() {
                     transition={{ duration: 0.2 }}
                     className="space-y-1.5"
                   >
-                    <div className="text-foreground/40">// Ready to learn & adapt to any stack:</div>
+                    <div className="text-foreground/40">// rushali.config.ts</div>
                     <div>
                       <span className="text-purple-400">export const</span>{" "}
-                      <span className="text-neon-cyan">learningEngine</span> = &#123;
+                      <span className="text-neon-cyan">developerConfig</span> = &#123;
                     </div>
                     <div className="pl-4">
-                      <span className="text-blue-300">mindset:</span>{" "}
-                      <span className="text-emerald-300">&quot;Always hungry for new technologies&quot;</span>,
+                      <span className="text-blue-300">role:</span>{" "}
+                      <span className="text-emerald-300">&quot;Full Stack Developer&quot;</span>,
                     </div>
                     <div className="pl-4">
-                      <span className="text-blue-300">learningVelocity:</span>{" "}
-                      <span className="text-amber-300">&quot;High / Rapid Onboarding&quot;</span>,
+                      <span className="text-blue-300">experience:</span>{" "}
+                      <span className="text-amber-300">&quot;2+ years&quot;</span>,
                     </div>
                     <div className="pl-4">
-                      <span className="text-blue-300">adaptability:</span>{" "}
-                      <span className="text-purple-300">true</span>,
-                    </div>
-                    <div className="pl-4">
-                      <span className="text-blue-300">techHorizon:</span> [
+                      <span className="text-blue-300">focus:</span> [
                     </div>
                     <div className="pl-8 text-foreground/80">
-                      &quot;Cloud Edge Functions&quot;, <br />
-                      &quot;AI APIs & LLM Integration&quot;, <br />
-                      &quot;Next-Gen Web Frameworks&quot;, <br />
-                      &quot;Scalable Microservices&quot;
+                      &quot;React.js&quot;, <br />
+                      &quot;Next.js&quot;, <br />
+                      &quot;Node.js&quot;, <br />
+                      &quot;MongoDB&quot;
                     </div>
                     <div className="pl-4">],</div>
                     <div className="pl-4">
-                      <span className="text-blue-300">execute:</span> () =&gt; &#123;
+                      <span className="text-blue-300">clientSites:</span>{" "}
+                      <span className="text-emerald-300">&quot;6+ live websites at NetInc Digital Services&quot;</span>
                     </div>
-                    <div className="pl-8 text-neon-accent">
-                      return &quot;Turn documentation into live production code&quot;;
-                    </div>
-                    <div className="pl-4">&#125;</div>
                     <div>&#125;;</div>
                   </motion.div>
                 )}
@@ -237,25 +230,21 @@ export default function About() {
                       <span className="text-rose-300">&quot;name&quot;</span>: <span className="text-emerald-300">&quot;Rushali Jivrajani&quot;</span>,
                     </div>
                     <div className="pl-4">
-                      <span className="text-rose-300">&quot;title&quot;</span>: <span className="text-emerald-300">&quot;Full Stack Developer&quot;</span>,
+                      <span className="text-rose-300">&quot;role&quot;</span>: <span className="text-emerald-300">&quot;Full Stack Developer&quot;</span>,
                     </div>
                     <div className="pl-4">
-                      <span className="text-rose-300">&quot;degree&quot;</span>: <span className="text-emerald-300">&quot;Master of Computer Application (GTU)&quot;</span>,
+                      <span className="text-rose-300">&quot;experience&quot;</span>: <span className="text-amber-300">&quot;2+ years&quot;</span>,
                     </div>
                     <div className="pl-4">
-                      <span className="text-rose-300">&quot;primaryStack&quot;</span>: [
+                      <span className="text-rose-300">&quot;focus&quot;</span>: [
                     </div>
                     <div className="pl-8 text-foreground/80">
-                      &quot;Next.js&quot;, &quot;React&quot;, &quot;Node.js&quot;, &quot;Express&quot;
+                      &quot;React.js&quot;, &quot;Next.js&quot;, &quot;Node.js&quot;, &quot;MongoDB&quot;
                     </div>
                     <div className="pl-4">],</div>
                     <div className="pl-4">
-                      <span className="text-rose-300">&quot;databases&quot;</span>: [
+                      <span className="text-rose-300">&quot;clientSites&quot;</span>: <span className="text-emerald-300">&quot;6+ live websites at NetInc Digital Services&quot;</span>,
                     </div>
-                    <div className="pl-8 text-neon-cyan">
-                      &quot;PostgreSQL&quot;, &quot;MySQL&quot;, &quot;MongoDB&quot;
-                    </div>
-                    <div className="pl-4">],</div>
                     <div className="pl-4">
                       <span className="text-rose-300">&quot;openToWork&quot;</span>: <span className="text-purple-300">true</span>
                     </div>
@@ -272,12 +261,13 @@ export default function About() {
                     transition={{ duration: 0.2 }}
                     className="space-y-1.5"
                   >
-                    <div className="text-foreground/40">// Engineering Principles:</div>
-                    <div className="text-purple-400">interface <span className="text-amber-300">Philosophy</span> &#123;</div>
-                    <div className="pl-4 text-blue-300">codeQuality: <span className="text-emerald-300">&quot;Clean, typed & self-documenting&quot;</span>;</div>
-                    <div className="pl-4 text-blue-300">architecture: <span className="text-emerald-300">&quot;Scalable & modular&quot;</span>;</div>
-                    <div className="pl-4 text-blue-300">communication: <span className="text-emerald-300">&quot;Proactive & transparent&quot;</span>;</div>
-                    <div className="pl-4 text-blue-300">learningStance: <span className="text-neon-accent">&quot;Zero fear of new frameworks&quot;</span>;</div>
+                    <div className="text-foreground/40">// Core Tech Stack:</div>
+                    <div className="text-purple-400">interface <span className="text-amber-300">Developer</span> &#123;</div>
+                    <div className="pl-4 text-blue-300">role: <span className="text-emerald-300">&quot;Full Stack Developer&quot;</span>;</div>
+                    <div className="pl-4 text-blue-300">experience: <span className="text-emerald-300">&quot;2+ years&quot;</span>;</div>
+                    <div className="pl-4 text-blue-300">frontend: <span className="text-emerald-300">&quot;React.js, Vue.js, Next.js&quot;</span>;</div>
+                    <div className="pl-4 text-blue-300">backend: <span className="text-emerald-300">&quot;Node.js, Express, REST APIs&quot;</span>;</div>
+                    <div className="pl-4 text-blue-300">databases: <span className="text-neon-cyan">&quot;MongoDB, MySQL, PostgreSQL&quot;</span>;</div>
                     <div>&#125;</div>
                   </motion.div>
                 )}
@@ -286,7 +276,7 @@ export default function About() {
 
             {/* Terminal Footer status */}
             <div className="px-5 py-2.5 bg-[#05080f] border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-foreground/40">
-              <span>Ready for high-impact engineering roles</span>
+              <span>Open to Full Stack / MERN roles</span>
               <span className="text-neon-cyan">UTF-8 • TypeScript</span>
             </div>
           </motion.div>
@@ -313,13 +303,12 @@ export default function About() {
               </div>
               
               <h3 className="font-display font-black text-2xl sm:text-3xl md:text-5xl text-foreground mb-3 sm:mb-4 leading-tight">
-                Ready To Learn Anything <br className="hidden sm:block" />
-                <span className="text-neon-accent">New.</span>
+                Quick To Learn. <br className="hidden sm:block" />
+                <span className="text-neon-accent">Built To Deliver.</span>
               </h3>
 
               <p className="font-mono text-xs sm:text-sm text-foreground/75 leading-relaxed max-w-2xl">
-                Technology moves fast, and I love keeping up with it. It’s not just about what I already know, but how fast I can learn what comes next. 
-                Whether your team uses the latest cloud tools, custom internal systems, or AI, I can jump in, ask the right questions, and start contributing quickly.
+                Technology moves fast, and I enjoy keeping up. I pick up new frameworks quickly, ask the right questions and start contributing early - and I use AI tools in my daily workflow.
               </p>
             </div>
 
@@ -335,14 +324,14 @@ export default function About() {
 
               <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1.5 sm:pt-2">
                 {[
-                  "AI & LLM API Integration",
-                  "Cloud Microservices",
-                  "Edge Computing & Serverless",
-                  "Next.js 16 Server Actions",
-                  "GraphQL & tRPC",
-                  "Modern WebGL & 3D Web",
-                  "Automated CI/CD Pipelines",
-                  "Any Custom Tech Your Team Uses"
+                  "REST API Integration",
+                  "JWT Authentication",
+                  "Redux Toolkit State Management",
+                  "Reusable React & Vue Components",
+                  "Responsive & Cross-Browser UI",
+                  "CI/CD with GitHub Actions",
+                  "Vercel Deployment",
+                  "AI-Assisted Development"
                 ].map((item, idx) => (
                   <span 
                     key={idx}

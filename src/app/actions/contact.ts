@@ -24,14 +24,14 @@ export async function submitContact(prevState: any, formData: FormData) {
 
     // If honeypot is filled out, silently succeed to trick spam bots
     if (validated.honeypot) {
-      return { success: true, message: "Message securely transmitted." };
+      return { success: true, message: "Thanks for reaching out - I'll get back to you soon." };
     }
 
     if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
       if (process.env.NODE_ENV === "development") {
         console.warn("⚠️  Nodemailer credentials missing. Simulating successful form submission for local testing.");
         await new Promise(resolve => setTimeout(resolve, 1500));
-        return { success: true, message: "Message securely transmitted. (Simulated Local Test)" };
+        return { success: true, message: "Thanks for reaching out - I'll get back to you soon." };
       }
       throw new Error("Email configuration is missing on server.");
     }
@@ -313,7 +313,7 @@ export async function submitContact(prevState: any, formData: FormData) {
 
     return { 
       success: true, 
-      message: "Message securely transmitted. I will get back to you shortly." 
+      message: "Thanks for reaching out - I'll get back to you soon." 
     };
   } catch (error: any) {
     console.error("Contact Form Error:", error);
@@ -321,6 +321,6 @@ export async function submitContact(prevState: any, formData: FormData) {
       const msg = error.issues?.[0]?.message || error.errors?.[0]?.message || "Invalid form data";
       return { success: false, message: msg };
     }
-    return { success: false, message: "Transmission failed. Please try again later." };
+    return { success: false, message: "Something went wrong. Please try again or email me directly." };
   }
 }

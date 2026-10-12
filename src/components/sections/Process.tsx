@@ -6,27 +6,27 @@ const processSteps = [
   {
     step: "01",
     phase: "Phase 01",
-    title: "Discovery & UI/UX",
-    desc: "I start by understanding the goals of the project and mapping out how users will interact with it before writing a single line of code.",
-    highlights: ["Scope & Requirements", "Architecture Planning", "UI/UX Wireframes"],
+    title: "Discovery & Planning",
+    desc: "I start by understanding the goals, users and scope of the project, then plan the pages, components and data flow before writing any code.",
+    highlights: ["Scope & Requirements", "Component Planning", "Task Breakdown"],
     icon: Compass,
     accent: "#38bdf8",
   },
   {
     step: "02",
     phase: "Phase 02",
-    title: "UI Design & Frontend",
-    desc: "I design intuitive wireframes in Figma and build fast, responsive user interfaces using Next.js, React, and modern AI development tools.",
-    highlights: ["Figma UI/UX", "Component Systems", "AI-Assisted Dev"],
+    title: "Frontend Development",
+    desc: "I build responsive, reusable interfaces with React.js, Next.js or Vue.js, styled with Tailwind CSS or Bootstrap and checked across browsers and devices.",
+    highlights: ["Reusable Components", "Responsive & Cross-Browser", "AI-Assisted Dev"],
     icon: Code2,
     accent: "#22d3ee",
   },
   {
     step: "03",
     phase: "Phase 03",
-    title: "Setting up the Backend",
-    desc: "I build secure and reliable APIs and databases to make sure the app can handle data efficiently behind the scenes.",
-    highlights: ["Secure API Routing", "Data Modeling", "Auth & Validation"],
+    title: "API & Integration",
+    desc: "I connect the frontend to REST APIs and databases, with JWT-based authentication and clean state management so data flows reliably.",
+    highlights: ["REST API Integration", "JWT Authentication", "State Management (Redux)"],
     icon: Server,
     accent: "#60a5fa",
   },
@@ -34,8 +34,8 @@ const processSteps = [
     step: "04",
     phase: "Phase 04",
     title: "Testing & Launch",
-    desc: "Finally, I thoroughly test the app, optimize its performance, and launch it smoothly so it's ready for users.",
-    highlights: ["Automated CI/CD", "Vercel / Cloud Deploy", "Performance Audits"],
+    desc: "I test across devices and browsers, fix bugs, and ship through Git-based deployments on Vercel, so every release is smooth and stable.",
+    highlights: ["Bug Fixing & QA", "CI/CD Pipeline", "Vercel Deployment"],
     icon: Rocket,
     accent: "#38bdf8",
   },
@@ -80,7 +80,7 @@ export default function Process() {
             transition={{ delay: 0.2 }}
             className="font-mono text-xs sm:text-sm text-foreground/60 leading-relaxed px-2"
           >
-            A simple, four-step process that helps me build projects from the ground up.
+            A clear four-step workflow that takes a project from requirements to a live, stable release.
           </motion.p>
         </div>
 

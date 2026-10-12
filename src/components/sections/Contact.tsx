@@ -109,7 +109,7 @@ export default function Contact() {
                 className="w-full bg-transparent border-b border-foreground/20 py-3 sm:py-4 text-foreground text-base sm:text-sm font-sans outline-none focus:border-neon-accent transition-colors resize-none peer"
                 placeholder=" "
               />
-              <label htmlFor="message" className="absolute left-0 top-3 sm:top-4 font-mono text-xs text-foreground/50 uppercase tracking-widest transition-all peer-focus:-top-4 peer-focus:text-[9px] peer-focus:text-neon-accent peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-[9px]">Your Message</label>
+              <label htmlFor="message" className="absolute left-0 top-3 sm:top-4 font-mono text-xs text-foreground/50 uppercase tracking-widest transition-all peer-focus:-top-4 peer-focus:text-[9px] peer-focus:text-neon-accent peer-not-placeholder-shown:-top-4 peer-not-placeholder-shown:text-[9px]">Tell me about the role or project</label>
             </div>
             
             <button 

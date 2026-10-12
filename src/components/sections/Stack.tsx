@@ -39,7 +39,7 @@ export default function Stack() {
             Core <span className="text-neon-accent">Technologies.</span>
           </h2>
           <p className="font-mono text-xs sm:text-sm text-foreground/60 leading-relaxed px-2">
-            A look at the tools, languages, and frameworks I use to build great web applications.
+            The languages, frameworks and tools I use to build responsive, production-ready web applications.
           </p>
         </div>
 

@@ -4,26 +4,26 @@ const flowSteps = [
   {
     num: "01",
     label: "Client UI",
-    tech: "Next.js / React",
-    desc: "Fast, responsive interface",
+    tech: "React / Next.js / Vue.js",
+    desc: "Responsive, component-based interfaces",
   },
   {
     num: "02",
     label: "API Layer",
-    tech: "Node.js / Actions",
-    desc: "Secure server-side logic",
+    tech: "Node.js / Express",
+    desc: "REST APIs with JWT-secured routes",
   },
   {
     num: "03",
     label: "Database",
-    tech: "MongoDB / PostgreSQL",
-    desc: "Persistent data storage",
+    tech: "MongoDB / PostgreSQL / MySQL",
+    desc: "Structured, persistent data storage",
   },
   {
     num: "04",
     label: "Deployment",
-    tech: "Vercel CI/CD",
-    desc: "Optimized global hosting",
+    tech: "Vercel / GitHub Actions",
+    desc: "Git-based CI/CD with live deployments on Vercel",
   },
 ];
 

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     default: "Rushali Jivrajani | Full Stack Developer",
     template: "%s | Rushali Jivrajani",
   },
-  description: "Portfolio of Rushali Jivrajani — Full Stack Developer specializing in Next.js, React.js, Node.js, and databases (PostgreSQL, MongoDB, MySQL). Building scalable, high-performance web applications.",
+  description: "Rushali Jivrajani - Full Stack Developer (React.js, Next.js, Node.js, MongoDB) with 2+ years of experience delivering live client websites.",
   keywords: [
     "Rushali Jivrajani",
     "Full Stack Developer",
@@ -26,8 +26,6 @@ export const metadata: Metadata = {
     "MongoDB",
     "MySQL",
     "Web Developer Portfolio",
-    "Figma",
-    "UI/UX Design",
     "AI Tools",
     "Software Engineer",
     "India"
@@ -40,7 +38,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Rushali Jivrajani | Full Stack Developer",
-    description: "Explore the portfolio of Rushali Jivrajani, featuring modern web projects, case studies, and engineering expertise in Next.js, React, Node.js, and databases.",
+    description: "Rushali Jivrajani - Full Stack Developer (React.js, Next.js, Node.js, MongoDB) with 2+ years of experience delivering live client websites.",
     url: "https://rushali-jivrajani.vercel.app",
     siteName: "Rushali Jivrajani Portfolio",
     locale: "en_US",
@@ -67,7 +65,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Rushali Jivrajani | Full Stack Developer",
-    description: "Portfolio of Rushali Jivrajani — Full Stack Developer specializing in Next.js, React.js, Node.js, and databases.",
+    description: "Rushali Jivrajani - Full Stack Developer (React.js, Next.js, Node.js, MongoDB) with 2+ years of experience delivering live client websites.",
     images: ["https://rushali-jivrajani.vercel.app/og-image.jpg"],
     creator: "@rush4812",
   },

@@ -64,7 +64,7 @@ export function ProjectInfo({ project }: { project: Project }) {
             rel="noopener noreferrer" 
             className="group font-mono text-[10px] sm:text-[11px] text-foreground uppercase tracking-widest flex items-center gap-1.5 px-3.5 py-1.5 bg-white/5 hover:bg-white/10 border border-white/15 rounded-lg transition-all focus:outline-none focus:ring-2 focus:ring-neon-accent active:scale-95"
           >
-            <span className="font-bold">Live Demo</span>
+            <span className="font-bold">Live Site</span>
             <ArrowUpRight size={13} className="text-foreground/60 group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
           </a>
         )}
