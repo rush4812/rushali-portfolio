@@ -6,12 +6,18 @@ export function ProjectInfo({ project }: { project: Project }) {
     <div className="w-full flex flex-col justify-between p-4 sm:p-6 md:p-7 lg:p-8 h-full">
       <div className="flex flex-col items-start w-full">
         {/* Meta Row */}
-        <div className="font-mono text-[10px] md:text-[11px] text-foreground/60 uppercase tracking-widest mb-1.5 sm:mb-3 flex flex-wrap items-center gap-1.5 sm:gap-2">
+        <div className="font-mono text-[10px] md:text-[11px] text-foreground/60 uppercase tracking-widest mb-1.5 sm:mb-2.5 flex flex-wrap items-center gap-1.5 sm:gap-2">
           <span style={{ color: project.accent }} className="font-semibold">{project.type}</span>
           <span>·</span>
           <span>{project.year}</span>
           <span>·</span>
           <span className="text-foreground/80">{project.role}</span>
+        </div>
+
+        {/* Client Provenance Pill */}
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/[0.04] border border-white/10 font-mono text-[9px] text-neon-accent mb-2 tracking-wider uppercase">
+          <span className="w-1.5 h-1.5 rounded-full bg-neon-accent" />
+          <span>Client Work @ NetInc</span>
         </div>
         
         {/* Title */}

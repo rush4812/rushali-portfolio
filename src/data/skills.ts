@@ -127,7 +127,7 @@ export const skillsData: Skill[] = [
     icon: "SiLaravel",
     color: "#FF2D20",
     level: "weekly",
-    usedIn: [{ project: "Elecon", note: "MVC architecture, Eloquent ORM and database management", href: "#projects" }],
+    usedIn: [{ project: "Client Work", note: "MVC architecture, Eloquent ORM and database management", href: "#projects" }],
     relatedTo: ["php", "mysql", "rest-apis"],
   },
   {
@@ -215,7 +215,7 @@ export const skillsData: Skill[] = [
     icon: "SiGithub",
     color: "#F0F6FC",
     level: "daily",
-    usedIn: [{ project: "Elecon", note: "Source code repository hosting, branch workflows & code reviews", href: "#projects" }],
+    usedIn: [{ project: "Amanta", note: "Source code repository hosting, branch workflows & code reviews", href: "#projects" }],
     relatedTo: ["git", "github-actions"],
   },
   {
@@ -235,7 +235,7 @@ export const skillsData: Skill[] = [
     icon: "SiGit",
     color: "#F05032",
     level: "daily",
-    usedIn: [{ project: "Elecon", note: "Distributed version control, branching and commits", href: "#projects" }],
+    usedIn: [{ project: "Madhubhan Resort", note: "Distributed version control, branching and commits", href: "#projects" }],
     relatedTo: ["github", "vercel"],
   },
 
@@ -269,7 +269,7 @@ export const skillsData: Skill[] = [
     icon: "SiPhp",
     color: "#777BB4",
     level: "daily",
-    usedIn: [{ project: "Elecon", note: "Server-side web scripting and legacy enterprise maintenance", href: "#projects" }],
+    usedIn: [{ project: "MDI Gurgaon", note: "Server-side web scripting and legacy enterprise maintenance", href: "#projects" }],
     relatedTo: ["laravel", "codeigniter", "mysql"],
   },
 ];

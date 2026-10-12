@@ -30,7 +30,7 @@ export const portfolioData = {
       tech: [],
       liveDemo: "https://amanta.co.in",
       github: "#",
-      coverImage: "/projects/amanta.png",
+      coverImage: "/projects/logos/amanta-logo.svg",
       caseStudy: {
         problem: "",
         approach: "Developed and launched Amanta Healthcare's new website with a clean, responsive UI that works across devices.",
@@ -48,7 +48,7 @@ export const portfolioData = {
       tech: [],
       liveDemo: "https://calicomuseum.org",
       github: "#",
-      coverImage: "/projects/calico.png",
+      coverImage: "/projects/logos/calico-logo.svg",
       caseStudy: {
         problem: "",
         approach: "Contributed to the frontend development of the museum's new website.",
@@ -66,7 +66,7 @@ export const portfolioData = {
       tech: [],
       liveDemo: "https://madhubhanresortandspa.com/",
       github: "#",
-      coverImage: "/projects/madhubhan.png",
+      coverImage: "/projects/logos/madhubhan-logo.png",
       caseStudy: {
         problem: "",
         approach: "Led the complete build and launch of the resort's new website from scratch, delivering a responsive experience across devices.",
@@ -84,7 +84,7 @@ export const portfolioData = {
       tech: [],
       liveDemo: "https://cupdf.org/",
       github: "#",
-      coverImage: "/projects/cupdf.png",
+      coverImage: "/projects/logos/cupdf-logo.png",
       caseStudy: {
         problem: "",
         approach: "Built the user interface for the CUPDF website using Vue.js.",
@@ -97,15 +97,15 @@ export const portfolioData = {
       id: "mdi-gurgaon",
       slug: "mdi-gurgaon",
       title: "MDI Gurgaon",
-      summary: "Handled website maintenance and layout fixes to keep pages clean and consistent.",
-      role: "Website Maintenance",
+      summary: "Handled ongoing AMC maintenance, design updates, and client-requested UI changes to keep the institution's portal clean, updated, and responsive.",
+      role: "Website Maintenance & AMC",
       tech: [],
       liveDemo: "https://mdi.ac.in",
       github: "#",
-      coverImage: "/projects/mdi.png",
+      coverImage: "/projects/logos/mdi-logo.png",
       caseStudy: {
         problem: "",
-        approach: "Handled website maintenance and layout fixes to keep pages clean and consistent.",
+        approach: "Handled ongoing AMC maintenance, design updates, and client-requested UI changes to keep the institution's portal clean, updated, and responsive.",
         techDecisions: "",
         result: "",
         gallery: []
@@ -120,28 +120,10 @@ export const portfolioData = {
       tech: [],
       liveDemo: "",
       github: "#",
-      coverImage: "/projects/akwakare.png",
+      coverImage: "/projects/logos/akwakare-logo.png",
       caseStudy: {
         problem: "",
         approach: "A project currently under development.",
-        techDecisions: "",
-        result: "",
-        gallery: []
-      }
-    },
-    {
-      id: "elecon",
-      slug: "elecon",
-      title: "Elecon",
-      summary: "Handled website maintenance and layout fixes to keep pages clean and consistent.",
-      role: "Website Maintenance",
-      tech: [],
-      liveDemo: "{{ELECON_URL}}",
-      github: "#",
-      coverImage: "/projects/elecon.png",
-      caseStudy: {
-        problem: "",
-        approach: "Handled website maintenance and layout fixes to keep pages clean and consistent.",
         techDecisions: "",
         result: "",
         gallery: []
