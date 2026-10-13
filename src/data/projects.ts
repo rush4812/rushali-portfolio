@@ -108,22 +108,5 @@ export const projectsData: Project[] = [
     logoSrc: "/projects/logos/mdi-logo.png",
     clientDomain: "mdi.ac.in",
     liveUrl: "https://mdi.ac.in",
-  },
-  {
-    id: "akwakare",
-    slug: "akwakare",
-    title: "Akwakare",
-    type: "Industrial Web Platform",
-    year: "2025-26",
-    role: "Full Stack Developer",
-    summary: "Developing end-to-end web modules, relational data pipelines, and responsive dashboards for an industrial water treatment solutions management platform.",
-    problem: "Industrial operations needed a centralized web application to streamline water treatment chemical data, testing logs, and client inquiries.",
-    built: "Engineering full-stack architecture, database models, and dynamic administrative workflows (in active development).",
-    result: "Active development in beta environment, validating full-stack workflows.",
-    tech: [],
-    accent: "#60a5fa", // blue
-    media: { type: "image", src: "/projects/logos/akwakare-logo.png" },
-    logoSrc: "/projects/logos/akwakare-logo.png",
-    clientDomain: "beta.netlink.co.in",
   }
 ];

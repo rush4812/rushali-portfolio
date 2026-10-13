@@ -110,24 +110,6 @@ export const portfolioData = {
         result: "Maintained high uptime and consistent portal stability across institutional admissions and announcements.",
         gallery: []
       }
-    },
-    {
-      id: "akwakare",
-      slug: "akwakare",
-      title: "Akwakare",
-      summary: "Developing end-to-end web modules, relational data pipelines, and responsive dashboards for an industrial water treatment solutions management platform.",
-      role: "Full Stack Developer",
-      tech: [],
-      liveDemo: "",
-      github: "#",
-      coverImage: "/projects/logos/akwakare-logo.png",
-      caseStudy: {
-        problem: "Industrial operations needed a centralized web application to streamline water treatment chemical data, testing logs, and client inquiries.",
-        approach: "Engineering full-stack architecture, database models, and dynamic administrative workflows (in active development).",
-        techDecisions: "Modular operational dashboards and relational data models for chemical specs and client inquiry data.",
-        result: "Active development in beta environment, validating full-stack workflows.",
-        gallery: []
-      }
     }
   ],
   experience: [
